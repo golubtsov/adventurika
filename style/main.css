@@ -1,0 +1,28 @@
+.content {
+    width: 100%;
+}
+
+.blc-banner {
+    width: 100%;
+    height: 470px;
+    display: flex;
+    background-image: url('/images/banner/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.blc-banner-title-main {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.banner-title-main {
+    text-align: right;
+    color: white;
+}
