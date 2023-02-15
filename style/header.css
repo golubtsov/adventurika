@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+.wrapper {
+    width: 100%;
+    background-color: #fbfbfb;
+}
+
 header {
     width: 100%;
     display: flex;

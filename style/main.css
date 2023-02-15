@@ -1,6 +1,9 @@
 .content, .container {
     width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ========== Баннер ========== */
 
 .blc-banner {
     width: 100%;
@@ -53,7 +56,6 @@
     display: flex;
     align-items: center;
     justify-content: right;
-    /* flex-direction: column; */
 }
 
 .banner-title {
@@ -68,6 +70,112 @@
 
 .banner-title>span {
     font-size: 18px;
+}
+
+/* ========== Загаловки ========== */
+
+.blc-title-prod {
+    width: 100%;
+    margin: 30px auto;
+}
+
+.title-prod {
+    width: 70%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-title-prod {
+    text-align: center;
+}
+
+/* ========== Слайдер ========== */
+
+.slider {
+    width: 70%;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    margin: 50px auto;
+    align-items: center;
+    justify-content: right;
+}
+
+.line-slider {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    align-items: center;
+    justify-content: right;
+}
+
+.blc-btn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.blc-btn:hover {
+    background-color: #e6e6e6a9;
+}
+
+.btn-left, .btn-right{
+    margin: auto;
+    text-align: center;
+    transition: all 0.3s ease-in;
+}
+
+/* ========== benefits(преимущества) ========== */
+
+.blc-benefits {
+    width: 70%;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-benefits {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    margin: 20px auto;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.146);
+}
+
+.list-benefits>ul {
+    width: 80%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    display: grid;
+    list-style-type: none;
+    margin: 20px auto;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.icon-benefit {
+    width: 80%;
+    /* display: flex; */
+    /* margin: 0 30px; */
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 80px;
+    /* background-color: blue; */
+}
+
+.item-benefit> span {
+    width: 80%;
+    margin: 15px auto;
+    display: block;
+    text-align: center;
 }
 
 @media screen and (max-width: 1000px) {
