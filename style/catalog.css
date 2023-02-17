@@ -44,6 +44,7 @@
 .blc-btn-podcatalog {
     width: 100%;
     display: flex;
+    border-bottom: 1px solid #cccccc85;
 }
 
 .btn-podcatalog {
@@ -53,4 +54,30 @@
 #list-outline {
     font-size: 32px;
     cursor: pointer;
+}
+
+/* ========== CATALOG ========== */
+
+.blc-products {
+    width: 70%;
+    margin: 40px auto;
+    background-color: rgba(0, 255, 255, 0.331);
+    min-height: 800px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666;
+}
+
+.blc-title-filtr {
+    margin: 15px auto;
+}
+
+.blc-filtr {
+    background-color: rgba(0, 255, 94, 0.327);
+    min-height: 800px;
+}
+
+.title-filtr {
+    text-align: center;
 }
