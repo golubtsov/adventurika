@@ -140,7 +140,7 @@ nav {
     color: #666;
 }
 
-.nav-items-catalog {
+/* .nav-items-catalog {
     height: 0;
     display: none;
     margin: auto;
@@ -156,7 +156,7 @@ nav {
     margin: 5px;
     padding: 10px 0;
     opacity: 0;
-}
+} */
 
 /* ссылка на каталог */
 /* #nav-item-catalog:hover .nav-items-catalog{

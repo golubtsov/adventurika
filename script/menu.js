@@ -3,6 +3,7 @@ const menu_adapt = document.querySelector('.adapt');
 const nav_items_adapt = document.querySelectorAll('.adapt .nav-item');
 const btn_adapt = document.querySelector('.btn-adapt-menu');
 btn_adapt.addEventListener('click', () => {
+    console.log(btn_adapt);
     if(check_active(btn_adapt)){
         remove_menu(btn_adapt, menu_adapt, nav_items_adapt);
     } else {
@@ -10,15 +11,6 @@ btn_adapt.addEventListener('click', () => {
     }
 });
 
-// ссылки li>a на каталог
-const nav_items_items = document.querySelectorAll('.nav-items-catalog .nav-item');
-// список ul под ссылкой каталог
-const nav_items_catalog = document.querySelector('.nav-items-catalog');
-// ссылка li#id=nav-item-catalog  каталог
-const nav_item_catalog = document.querySelector('#nav-item-catalog');
-nav_item_catalog.addEventListener('mouseover', () => {
-        get_menu(nav_item_catalog, nav_items_catalog, nav_items_items);
-});
 
 function check_active(el){
     if(el.classList.contains('active')){

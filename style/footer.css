@@ -1,0 +1,38 @@
+footer {
+    width: 100%;
+    background-color: #4c4c4c;
+    justify-content: center;
+    padding: 25px 0;
+}
+
+.blc-footer {
+    width: 70%;
+    margin: auto;
+    display: flex;
+}
+
+.list-footer-items {
+    width: 33%;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.list-footer-item, .list-footer-items span {
+    font-size: 18px;
+    color: white;
+    margin: 10px auto;
+}
+
+.list-footer-items:last-child {
+    list-style-type: disc;
+}
+
+.link-footer  {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+}
+
+.link-footer:hover {
+    text-decoration: underline;
+}
