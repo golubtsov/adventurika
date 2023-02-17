@@ -4,7 +4,6 @@ const lists_podcatalog = document.querySelectorAll('.list-podcatalog');
 
 const btn_podcatalog = document.querySelector('#list-outline');
 btn_podcatalog.addEventListener('click', () => {
-    console.log(btn_podcatalog);
     if(check_active(btn_podcatalog)){
         remove_catalog();
     } else {
@@ -48,3 +47,39 @@ function get_catalog(){
         }
     }, 600);
 }
+
+// работа блока фильтр, когда он нагодится сверху 
+
+const form_filtr = document.querySelector('.form-filtr');
+
+const btn_filtr = document.querySelector('.title-filtr');
+btn_filtr.addEventListener('click', () => {
+    if(check_active(btn_filtr)){
+        remove_blc_filtr();
+    } else {
+        get_blc_filtr();
+    }
+});
+
+function remove_blc_filtr(){
+    btn_filtr.classList.remove('active');
+    form_filtr.style.opacity = 0;
+    setTimeout(() => {
+        form_filtr.style.height = 0 + 'px';
+    }, 400);
+    setTimeout(() => {
+        form_filtr.style.display = 'none';
+    }, 700);
+}
+
+function get_blc_filtr(){
+    btn_filtr.classList.add('active');
+    form_filtr.style.display = 'block';
+    setTimeout(() => {
+        form_filtr.style.height = 220 + 'px';
+    }, 400);
+    setTimeout(() => {
+        form_filtr.style.opacity = 1;
+    }, 600);
+}
+
