@@ -1,10 +1,10 @@
-<?php
+<?php 
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "adventurika";
+$servername = 'localhost';
+$user = 'root';
+$password = 'root';
+$dbname = 'test';
 
-$connect = mysqli_connect($servername, $username, $password, $dbname);
+$connect = mysqli_connect($servername, $user, $password, $dbname);
 
 ?>

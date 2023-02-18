@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -9,8 +13,7 @@
     <link type="image/x-icon"  href="/images/favicon/favicon.ico" rel="shortcut icon">
 
     <link rel="stylesheet" href="/style/header.css">
-    <!-- <link rel="stylesheet" href="/style/card_prod.css"> -->
-    <!-- <link rel="stylesheet" href="/style/main.css"> -->
+    <link rel="stylesheet" href="/style/form_login.css">
     <link rel="stylesheet" href="/style/footer.css">
     
 </head>
@@ -38,7 +41,7 @@
                         - через сайт - круглосуточно</p>
                 </div>
                 <div class="blc-basket">
-                    <a href="/login/login.html" class="link-basket">
+                    <a href="/basket/basket.html" class="link-basket">
                         <div class="blc-img-basket">
                             <img src="/images/icon/basket.png" alt="Корзина Карабин" class="img-basket">
                         </div>
@@ -72,7 +75,28 @@
 
         <div class="content">
 
-            
+            <div class="blc-form-login">
+                <?php
+                    if($_SESSION["message"] != ''){
+                        echo '<p>' . $_SESSION["message"] . '</p>';
+                    }
+                ?>
+                <div class="blc-login-title">
+                    <h2 class="login-title">Вход</h2>
+                </div>
+                <form action="" class="form-login">
+                    <p><label for="email">Email <b>*</b></label></p>
+                    <p><input type="text" class="email" name="email" required></p>
+                    <p><label for="password">Пароль <b>*</b></label></p>
+                    <p><input type="text" class="password" name="password" required></p>
+                    <p><button type="submit">Войти</button></p>
+                </form>
+                <div class="blc-signup">
+                    <p class="title-signup">Не зарегистрированы?</p>
+                    <a href="/login/signup.html" class="link-signup">Зарегистрироваться</a>
+                </div>
+
+            </div>
 
         </div>
 

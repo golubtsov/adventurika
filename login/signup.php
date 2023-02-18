@@ -9,8 +9,7 @@
     <link type="image/x-icon"  href="/images/favicon/favicon.ico" rel="shortcut icon">
 
     <link rel="stylesheet" href="/style/header.css">
-    <!-- <link rel="stylesheet" href="/style/card_prod.css"> -->
-    <!-- <link rel="stylesheet" href="/style/main.css"> -->
+    <link rel="stylesheet" href="/style/form_login.css">
     <link rel="stylesheet" href="/style/footer.css">
     
 </head>
@@ -38,7 +37,7 @@
                         - через сайт - круглосуточно</p>
                 </div>
                 <div class="blc-basket">
-                    <a href="/login/login.html" class="link-basket">
+                    <a href="/basket/basket.html" class="link-basket">
                         <div class="blc-img-basket">
                             <img src="/images/icon/basket.png" alt="Корзина Карабин" class="img-basket">
                         </div>
@@ -72,7 +71,27 @@
 
         <div class="content">
 
-            
+            <div class="blc-form-login">
+                <div class="blc-login-title">
+                    <h2 class="login-title">Регистрация</h2>
+                </div>
+                <form method="POST" action="/server/server.php" class="form-login">
+                    <p><label for="fname">Имя <b>*</b></label></p>
+                    <p><input type="text" class="fname" name="fname" required></p>
+                    <p><label for="lname">Фамилия <b>*</b></label></p>
+                    <p><input type="text" class="lname" name="lname" required></p>
+                    <p><label for="phone">Номер телефона <b>*</b></label></p>
+                    <p><input type="text" class="phone" name="phone" required></p>
+                    <p><label for="email">Email <b>*</b></label></p>
+                    <p><input type="text" class="email" name="email" required></p>
+                    <p><label for="password">Пароль <b>*</b></label></p>
+                    <p><input type="text" class="password" name="password" required></p>
+                    <p><label for="password2">Повторите пароль <b>*</b></label></p>
+                    <p><input type="text" class="password2" name="password2" required></p>
+                    <p><button type="submit">Зарегистрироваться</button></p>
+                </form>
+
+            </div>
 
         </div>
 
