@@ -1,15 +1,20 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вход</title>
+    <title>О мгагзине</title>
 
     <link type="image/x-icon"  href="/images/favicon/favicon.ico" rel="shortcut icon">
 
     <link rel="stylesheet" href="/style/header.css">
-    <link rel="stylesheet" href="/style/form_login.css">
+    <link rel="stylesheet" href="/style/card_prod.css">
+    <!-- <link rel="stylesheet" href="/style/main.css"> -->
     <link rel="stylesheet" href="/style/footer.css">
     
 </head>
@@ -17,7 +22,18 @@
     <div class="wrapper">
 
         <!-- header.css -->
-        <div class="blc-black-line"></div>
+        <div class="blc-black-line">
+        <?php 
+                if($_SESSION['name']){
+                    echo '<div class="blc-name-user">
+                            <div class="name-user">
+                                <ion-icon class="icon-name-user" name="log-out-outline"></ion-icon>
+                                <p>' . $_SESSION['name'] . '</p>
+                            </div>
+                        </div>';
+                }
+            ?>
+        </div>
         <header>
             <div class="head-container">
                 <div class="blc-logo">
@@ -37,7 +53,7 @@
                         - через сайт - круглосуточно</p>
                 </div>
                 <div class="blc-basket">
-                    <a href="/basket/basket.html" class="link-basket">
+                    <a href="/basket/basket.php" class="link-basket">
                         <div class="blc-img-basket">
                             <img src="/images/icon/basket.png" alt="Корзина Карабин" class="img-basket">
                         </div>
@@ -54,15 +70,15 @@
             </div>
             <ul class="nav-items">
                 <li class="nav-item"><a href="/" class="nav-link">Главная</a></li>
-                <li class="nav-item"><a href="/catalog/catalog.html" class="nav-link">Каталог</a></li>
-                <li class="nav-item"><a href="/about/about.html" class="nav-link">О мгагзине</a></li>
-                <!-- <li class="nav-item"><a href="/basket/basket.html" class="nav-link">Корзина</a></li> -->
-                <li class="nav-item"><a href="/login/login.html" class="nav-link">Вход</a></li>
+                <li class="nav-item"><a href="/catalog/catalog.php" class="nav-link">Каталог</a></li>
+                <li class="nav-item"><a href="/about/about.php" class="nav-link">О мгагзине</a></li>
+                <!-- <li class="nav-item"><a href="/basket/basket.php" class="nav-link">Корзина</a></li> -->
+                <li class="nav-item"><a href="/login/login.php" class="nav-link">Вход</a></li>
             </ul>
         </nav>
         <ul class="nav-items adapt">
             <li class="nav-item"><a href="/" class="nav-link">Главная</a></li>
-            <li class="nav-item"><a href="/catalog/catalog.html" class="nav-link">Каталог</a></li>
+            <li class="nav-item"><a href="/catalog/catalog.php" class="nav-link">Каталог</a></li>
             <li class="nav-item"><a href="" class="nav-link">О мгагзине</a></li>
             <li class="nav-item"><a href="" class="nav-link">Корзина</a></li>
             <li class="nav-item"><a href="" class="nav-link">Вход</a></li>
@@ -71,23 +87,7 @@
 
         <div class="content">
 
-            <div class="blc-form-login">
-                <div class="blc-login-title">
-                    <h2 class="login-title">Вход</h2>
-                </div>
-                <form action="" class="form-login">
-                    <p><label for="email">Email <b>*</b></label></p>
-                    <p><input type="text" class="email" name="email" required></p>
-                    <p><label for="password">Пароль <b>*</b></label></p>
-                    <p><input type="text" class="password" name="password" required></p>
-                    <p><button type="submit">Войти</button></p>
-                </form>
-                <div class="blc-signup">
-                    <p class="title-signup">Не зарегистрированы?</p>
-                    <a href="/login/signup.html" class="link-signup">Зарегистрироваться</a>
-                </div>
-
-            </div>
+            
 
         </div>
 
@@ -100,9 +100,9 @@
                 </ul>
 
                 <ul class="list-footer-items">
-                    <li class="list-footer-item"><a href="/about/about.html" class="link-footer">Доставка и оплата</a></li>
-                    <li class="list-footer-item"><a href="/about/about.html" class="link-footer">Гарантии</a></li>
-                    <li class="list-footer-item"><a href="/about/about.html" class="link-footer">Контакты</a></li>
+                    <li class="list-footer-item"><a href="/about/about.php" class="link-footer">Доставка и оплата</a></li>
+                    <li class="list-footer-item"><a href="/about/about.php" class="link-footer">Гарантии</a></li>
+                    <li class="list-footer-item"><a href="/about/about.php" class="link-footer">Контакты</a></li>
                 </ul>
 
                 <ul class="list-footer-items">

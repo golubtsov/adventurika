@@ -21,7 +21,18 @@ session_start();
     <div class="wrapper">
 
         <!-- header.css -->
-        <div class="blc-black-line"></div>
+        <div class="blc-black-line">
+        <?php 
+                if($_SESSION['name']){
+                    echo '<div class="blc-name-user">
+                            <div class="name-user">
+                                <ion-icon class="icon-name-user" name="log-out-outline"></ion-icon>
+                                <p>' . $_SESSION['name'] . '</p>
+                            </div>
+                        </div>';
+                }
+            ?>
+        </div>
         <header>
             <div class="head-container">
                 <div class="blc-logo">
@@ -41,7 +52,7 @@ session_start();
                         - через сайт - круглосуточно</p>
                 </div>
                 <div class="blc-basket">
-                    <a href="/basket/basket.html" class="link-basket">
+                    <a href="/basket/basket.php" class="link-basket">
                         <div class="blc-img-basket">
                             <img src="/images/icon/basket.png" alt="Корзина Карабин" class="img-basket">
                         </div>
@@ -58,15 +69,15 @@ session_start();
             </div>
             <ul class="nav-items">
                 <li class="nav-item"><a href="/" class="nav-link">Главная</a></li>
-                <li class="nav-item"><a href="/catalog/catalog.html" class="nav-link">Каталог</a></li>
-                <li class="nav-item"><a href="/about/about.html" class="nav-link">О мгагзине</a></li>
-                <!-- <li class="nav-item"><a href="/basket/basket.html" class="nav-link">Корзина</a></li> -->
-                <li class="nav-item"><a href="/login/login.html" class="nav-link">Вход</a></li>
+                <li class="nav-item"><a href="/catalog/catalog.php" class="nav-link">Каталог</a></li>
+                <li class="nav-item"><a href="/about/about.php" class="nav-link">О мгагзине</a></li>
+                <!-- <li class="nav-item"><a href="/basket/basket.php" class="nav-link">Корзина</a></li> -->
+                <li class="nav-item"><a href="/login/login.php" class="nav-link">Вход</a></li>
             </ul>
         </nav>
         <ul class="nav-items adapt">
             <li class="nav-item"><a href="/" class="nav-link">Главная</a></li>
-            <li class="nav-item"><a href="/catalog/catalog.html" class="nav-link">Каталог</a></li>
+            <li class="nav-item"><a href="/catalog/catalog.php" class="nav-link">Каталог</a></li>
             <li class="nav-item"><a href="" class="nav-link">О мгагзине</a></li>
             <li class="nav-item"><a href="" class="nav-link">Корзина</a></li>
             <li class="nav-item"><a href="" class="nav-link">Вход</a></li>
@@ -84,7 +95,7 @@ session_start();
                 <div class="blc-login-title">
                     <h2 class="login-title">Вход</h2>
                 </div>
-                <form action="" class="form-login">
+                <form method="POST" action="/server/loginup/loginup.php" class="form-login">
                     <p><label for="email">Email <b>*</b></label></p>
                     <p><input type="text" class="email" name="email" required></p>
                     <p><label for="password">Пароль <b>*</b></label></p>
@@ -93,7 +104,7 @@ session_start();
                 </form>
                 <div class="blc-signup">
                     <p class="title-signup">Не зарегистрированы?</p>
-                    <a href="/login/signup.html" class="link-signup">Зарегистрироваться</a>
+                    <a href="/login/signup.php" class="link-signup">Зарегистрироваться</a>
                 </div>
 
             </div>
@@ -109,9 +120,9 @@ session_start();
                 </ul>
 
                 <ul class="list-footer-items">
-                    <li class="list-footer-item"><a href="/about/about.html" class="link-footer">Доставка и оплата</a></li>
-                    <li class="list-footer-item"><a href="/about/about.html" class="link-footer">Гарантии</a></li>
-                    <li class="list-footer-item"><a href="/about/about.html" class="link-footer">Контакты</a></li>
+                    <li class="list-footer-item"><a href="/about/about.php" class="link-footer">Доставка и оплата</a></li>
+                    <li class="list-footer-item"><a href="/about/about.php" class="link-footer">Гарантии</a></li>
+                    <li class="list-footer-item"><a href="/about/about.php" class="link-footer">Контакты</a></li>
                 </ul>
 
                 <ul class="list-footer-items">

@@ -17,14 +17,37 @@ header {
     margin-top: 10px;
 }
 
-.name_user {
-    color: white;
-}
 
 .blc-black-line {
     width: 100%;
     height: 30px;
     background-color: #000;
+}
+
+.blc-name-user {
+    width: 200px;
+    float: right;
+    color: white;
+    height: 100%;
+    font-size: 16px;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+.blc-name-user:hover {
+    background-color: #666;
+}
+
+.name-user {
+    display: flex;
+    justify-content: center;
+    line-height: 30px;
+}
+
+.icon-name-user {
+    display: block;
+    margin-top: 4px;
+    font-size: 22px;
 }
 
 .head-container {

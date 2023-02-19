@@ -12,7 +12,7 @@ b {
 }
 
 .blc-form-login {
-    width: 600px;
+    width: 500px;
     margin: auto;
     background-color: #d0d0d042;
     border-radius: 7px;
@@ -26,7 +26,7 @@ b {
 
 .login-title {
     text-align: center;
-    font-size: 32px;
+    font-size: 24px;
 }
 
 .form-login {
@@ -39,19 +39,19 @@ b {
 .form-login p {
     display: block;
     width: 80%;
-    margin: 8px auto;
+    margin: 4px auto;
 }
 
 .form-login label {
-    font-size: 22px;
+    font-size: 18px;
     margin: 8px auto;
 }
 
 .form-login input {
     width: 95%;
-    font-size: 18px;
+    font-size: 16px;
     padding: 4px 8px;
-    margin: 8px 0;
+    margin: 4px 0;
     border: none;
     box-shadow: 0px 0px 8px rgba(0,0,0, 0.2);
 }
@@ -59,15 +59,45 @@ b {
 .form-login button {
     display: block;
     font-size: 20px;
-    padding: 4px 8px;
+    padding: 8px 16px;
     margin: auto;
     margin-top: 15px;
-    padding: 3px 20px;
+    padding: 10px 30px;
     cursor: pointer;
     border: none;
     background-color: #31be90;
     border-radius: 5px;
     box-shadow: 0px 0px 8px rgba(0,0,0, 0.2);
+    color: white;
+    transition: all 0.3s ease-in;
+}
+
+.form-login button:hover {
+    transform: scale(0.98);
+    box-shadow: 0px 0px 20px rgba(0,0,0, 0.2);
+}
+
+.blc-error-msg {
+    width: 350px;
+    margin: auto;
+    margin-top: 18px;
+    background-color: rgba(255, 0, 0, 0.774);
+    padding: 1px;
+    border-radius: 5px;
+}
+
+.blc-success-msg {
+    width: 350px;
+    margin: auto;
+    margin-top: 18px;
+    background-color: #49be31;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+.error-msg, .success-msg {
+    text-align: center;
+    color: white;
 }
 
 .title-signup {

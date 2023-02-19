@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -18,7 +22,18 @@
     <div class="wrapper">
 
         <!-- header.css -->
-        <div class="blc-black-line"></div>
+        <div class="blc-black-line">
+        <?php 
+                if($_SESSION['name']){
+                    echo '<div class="blc-name-user">
+                            <div class="name-user">
+                                <ion-icon class="icon-name-user" name="log-out-outline"></ion-icon>
+                                <p>' . $_SESSION['name'] . '</p>
+                            </div>
+                        </div>';
+                }
+            ?>
+        </div>
         <header>
             <div class="head-container">
                 <div class="blc-logo">
@@ -38,7 +53,7 @@
                         - через сайт - круглосуточно</p>
                 </div>
                 <div class="blc-basket">
-                    <a href="/login/login.html" class="link-basket">
+                    <a href="/login/login.php" class="link-basket">
                         <div class="blc-img-basket">
                             <img src="/images/icon/basket.png" alt="Корзина Карабин" class="img-basket">
                         </div>
@@ -55,15 +70,15 @@
             </div>
             <ul class="nav-items">
                 <li class="nav-item"><a href="/" class="nav-link">Главная</a></li>
-                <li class="nav-item"><a href="/catalog/catalog.html" class="nav-link">Каталог</a></li>
-                <li class="nav-item"><a href="/about/about.html" class="nav-link">О мгагзине</a></li>
-                <!-- <li class="nav-item"><a href="/basket/basket.html" class="nav-link">Корзина</a></li> -->
-                <li class="nav-item"><a href="/login/login.html" class="nav-link">Вход</a></li>
+                <li class="nav-item"><a href="/catalog/catalog.php" class="nav-link">Каталог</a></li>
+                <li class="nav-item"><a href="/about/about.php" class="nav-link">О мгагзине</a></li>
+                <!-- <li class="nav-item"><a href="/basket/basket.php" class="nav-link">Корзина</a></li> -->
+                <li class="nav-item"><a href="/login/login.php" class="nav-link">Вход</a></li>
             </ul>
         </nav>
         <ul class="nav-items adapt">
             <li class="nav-item"><a href="/" class="nav-link">Главная</a></li>
-            <li class="nav-item"><a href="/catalog/catalog.html" class="nav-link">Каталог</a></li>
+            <li class="nav-item"><a href="/catalog/catalog.php" class="nav-link">Каталог</a></li>
             <li class="nav-item"><a href="" class="nav-link">О мгагзине</a></li>
             <li class="nav-item"><a href="" class="nav-link">Корзина</a></li>
             <li class="nav-item"><a href="" class="nav-link">Вход</a></li>
@@ -85,9 +100,9 @@
                 </ul>
 
                 <ul class="list-footer-items">
-                    <li class="list-footer-item"><a href="/about/about.html" class="link-footer">Доставка и оплата</a></li>
-                    <li class="list-footer-item"><a href="/about/about.html" class="link-footer">Гарантии</a></li>
-                    <li class="list-footer-item"><a href="/about/about.html" class="link-footer">Контакты</a></li>
+                    <li class="list-footer-item"><a href="/about/about.php" class="link-footer">Доставка и оплата</a></li>
+                    <li class="list-footer-item"><a href="/about/about.php" class="link-footer">Гарантии</a></li>
+                    <li class="list-footer-item"><a href="/about/about.php" class="link-footer">Контакты</a></li>
                 </ul>
 
                 <ul class="list-footer-items">

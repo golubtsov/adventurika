@@ -2,9 +2,9 @@
 
 session_start();
 
-include_once('./db/db.php');
-include_once('./functions/functions.php');
-include_once('./classes/classes.php');
+include_once('../db/db.php');
+include_once('../functions/functions.php');
+include_once('../classes/classes.php');
 
 if($_SERVER['REQUEST_METHOD']){
     switch ($_SERVER['REQUEST_METHOD']) {
@@ -13,11 +13,13 @@ if($_SERVER['REQUEST_METHOD']){
             if(!check_email($_POST['email'])){
                 $_SESSION["error"] = 'Не корректный email';
                 break;
+                header('Location: ../../login/signup.php');
             }
 
             if(!check_password($_POST['password'], $_POST['password2'])){
                 $_SESSION["error"] = 'Пароли не совпадают!';
                 break;
+                header('Location: ../../login/signup.php');
             }
 
             // получаем все email из бд
@@ -44,19 +46,17 @@ if($_SERVER['REQUEST_METHOD']){
                 $_SESSION["name"] = $new_user->email;
                 $_SESSION["message"] = 'Регистрация прошла успешно!';
 
-                header('Location: ../index.php');
+                header('Location: ../../login/signup.php');
             } else {
                 $_SESSION["error"] = $email_have;
+                header('Location: ../../login/signup.php');
             }
 
             break;
-
-        case 'GET':
-            
-            break;
         
         default:
-            
+            $_SESSION["error"] = 'Что-то пошло не так! Попробуйте немного позже.';
+            header('Location: ../../login/signup.php');
             break;
     }
 }
