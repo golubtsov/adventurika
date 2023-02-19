@@ -119,7 +119,7 @@ session_start();
                             echo '<div class="blc-success-msg">
                                     <p class="success-msg">' . $_SESSION['message'] . '</p>
                                 </div>
-                                <a href="/login/logib.php" class="link-signup">Войти</a>
+                                <a href="/login/login.php" class="link-signup">Войти</a>
                                 ';
                             $_SESSION['message'] = '';
                         }

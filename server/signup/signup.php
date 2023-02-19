@@ -16,8 +16,14 @@ if($_SERVER['REQUEST_METHOD']){
                 header('Location: ../../login/signup.php');
             }
 
-            if(!check_password($_POST['password'], $_POST['password2'])){
+            if(!check_passwords($_POST['password'], $_POST['password2'])){
                 $_SESSION["error"] = 'Пароли не совпадают!';
+                break;
+                header('Location: ../../login/signup.php');
+            }
+
+            if(check_reliability_password($_POST['password']) == 0){
+                $_SESSION["error"] = 'Пароль должен быть не менее 8 символов.';
                 break;
                 header('Location: ../../login/signup.php');
             }
@@ -42,10 +48,7 @@ if($_SERVER['REQUEST_METHOD']){
                 );
 
                 add_user($new_user, $connect);
-
-                $_SESSION["name"] = $new_user->email;
                 $_SESSION["message"] = 'Регистрация прошла успешно!';
-
                 header('Location: ../../login/signup.php');
             } else {
                 $_SESSION["error"] = $email_have;

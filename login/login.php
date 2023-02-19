@@ -101,6 +101,14 @@ session_start();
                     <p><label for="password">Пароль <b>*</b></label></p>
                     <p><input type="text" class="password" name="password" required></p>
                     <p><button type="submit">Войти</button></p>
+                    <?php
+                        if ($_SESSION['error']) {
+                            echo '<div class="blc-error-msg">
+                                    <p class="error-msg">' . $_SESSION['error'] . '</p>
+                                </div>';
+                            $_SESSION['error'] = '';
+                        }
+                    ?>
                 </form>
                 <div class="blc-signup">
                     <p class="title-signup">Не зарегистрированы?</p>
