@@ -15,6 +15,7 @@ session_start();
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/card_prod.css">
     <!-- <link rel="stylesheet" href="/style/main.css"> -->
+    <link rel="stylesheet" href="/style/product.css">
     <link rel="stylesheet" href="/style/footer.css">
     
 </head>
@@ -87,10 +88,66 @@ session_start();
 
         <div class="content">
 
-            
+            <div class="main-blc-product">
+                <div class="blc-images">
+                    <div class="blc-min-images">
+                        <img src="https://adventurica.ru/media/thumbnail/product/2014/2014_7_250x250.jpg" alt="" class="mini-img">
+                        <img src="https://adventurica.ru/media/thumbnail/product/2014/2014_7_250x250.jpg" alt="" class="mini-img">
+                        <img src="https://adventurica.ru/media/thumbnail/product/2014/2014_7_250x250.jpg" alt="" class="mini-img">
+                    </div>
+                    <div class="blc-main-img">
+                        <img src="https://adventurica.ru/media/thumbnail/product/2014/2014_7_250x250.jpg" alt="" class="main-img">
+                    </div>
+                </div>
+                <div class="blc-info-prod">
+                    <div class="blc-title-name-prod">
+                        <h1 class="title-namr-prod">Палатка</h1>
+                    </div>
+                    <div class="blc-code-prod">
+                        <span class="mini-blc-code-prod">Код товара: 2345</span>
+                    </div>
+                    <div class="blc-add-basket">
+                        <button class="btn-add-basket">В корзину</button>
+                    </div>
+                    <div class="blc-description">
+                        <h2 class="title-description">Характеристики</h2>
+                        <ul class="list-desc">
+                            <li>
+                                <p>боковые карманы с изменяемым объёмом</p>
+                            </li>
+                            <li>
+                                <p>плавающий клапан с объёмным карманом</p>
+                            </li>
+                            <li>
+                                <p>тубус с затяжкой для увеличения объёма</p>
+                            </li>
+                            <li>
+                                <p>ручки для переноски</p>
+                            </li>
+                            <li>
+                                <p>дополнительные точки навески</p>
+                            </li>
+                            <li>
+                                <p>дополнительные точки навески</p>
+                            </li>
+                            <li>
+                                <p>дополнительные точки навески</p>
+                            </li>
+                            <li>
+                                <p>дополнительные точки навески</p>
+                            </li>
+                            <li>
+                                <p>дополнительные точки навески</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
         </div>
+        <!-- "Назначение - трекинговый,Конструкция - анатомический,Объём - 80 л,Пол - унисекс,Складной стул - нет,Грудная стяжка - да,Поясной ремень - да,Нижний вход - нет,Накидка от дождя - нет,Материал - PolyOxford 600D PU, Авизент 5020,Вес - 1.2 кг"
 
+        "боковые карманы с изменяемым объёмом,плавающий клапан с объёмным карманом,тубус с затяжкой для увеличения объёма,ручки для переноски,дополнительные точки навески,вставки из пенополиэтилена в лямках, поясе и спинке,металлические силовые пряжки,анатомические S-образные лямки,длина боковых стяжек позволяет закрепить снаружи рюкзака дополнительное снаряжение" -->
         <footer>
             <div class="blc-footer">
                 <ul class="list-footer-items">
@@ -121,6 +178,8 @@ session_start();
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="../script/product/product.js"></script>
 
 </body>
 </html>

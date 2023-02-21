@@ -72,3 +72,19 @@ function get_products_by_podcategory($connect, $prod){
     $data = mysqli_fetch_all($data);
     return $data;
 }
+
+function get_all_products($connect){
+    $sql = "SELECT * FROM products";
+    $data = mysqli_query($connect, $sql);
+    $data = mysqli_fetch_all($data);
+    return $data;
+}
+
+// ========== ФУНКЦИИ ДЛЯ ПОЛУЧЕНИЕЯ ТОВАРОВ ПО ID ИЗ БД ==========
+
+function get_product_by_id($connect, $id){
+    $sql = "SELECT * FROM products WHERE id = '$id'";
+    $data = mysqli_query($connect, $sql);
+    $data = mysqli_fetch_all($data);
+    return $data[0];
+}
