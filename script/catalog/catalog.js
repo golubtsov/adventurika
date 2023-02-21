@@ -1,3 +1,4 @@
+// открытие / закрытие подкаталога
 const blc_lists_podcatalog = document.querySelector('.blc-lists-podcatalog');
 
 const lists_podcatalog = document.querySelectorAll('.list-podcatalog');
@@ -48,6 +49,8 @@ function get_catalog(){
     }, 600);
 }
 
+// открытие / закрытие подкаталога
+
 // работа блока фильтр, когда он нагодится сверху 
 
 const form_filtr = document.querySelector('.form-filtr');
@@ -83,3 +86,21 @@ function get_blc_filtr(){
     }, 600);
 }
 
+// работа блока фильтр, когда он нагодится сверху 
+
+// получение товаров определенной подкатегории
+
+const links_podcatalog = document.querySelectorAll('.link-podcatalog');
+for (const el of links_podcatalog) {
+    el.addEventListener('click', get_products);
+}
+
+async function get_products(event){
+    event.preventDefault();
+    let prod = this.getAttribute('data-podcatalog'); // название искомой подкатегории
+    await fetch(`../server/index.php?product=${prod}`)
+        .then(data => data.json())
+        .then(data => console.log(data))
+}
+
+// получение товаров определенной подкатегории

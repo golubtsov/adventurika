@@ -89,34 +89,32 @@ session_start();
             <div class="blc-lists-podcatalog">
                 <ul class="list-podcatalog">
                     <span>Туризм</span>
-                    <li class="item-podcatalog"><a href="#" class="link-podcatalog">Палатки</a></li>
-                    <li class="item-podcatalog"><a href="#" class="link-podcatalog">Спальники</a></li>
-                    <li class="item-podcatalog"><a href="#" class="link-podcatalog">Рюкзаки</a></li>
-                    <li class="item-podcatalog"><a href="#" class="link-podcatalog">Коврики</a></li>
+                    <li class="item-podcatalog"><a href="#" data-podcatalog="palatki" class="link-podcatalog">Палатки</a></li>
+                    <li class="item-podcatalog"><a href="#" data-podcatalog="spalniki" class="link-podcatalog">Спальники</a></li>
+                    <li class="item-podcatalog"><a href="#" data-podcatalog="rukzaki" class="link-podcatalog">Рюкзаки</a></li>
+                    <li class="item-podcatalog"><a href="#" data-podcatalog="covriki" class="link-podcatalog">Коврики</a></li>
                 </ul>
                 <ul class="list-podcatalog">
                     <span>Одежда</span>
-                    <li class="item-podcatalog"><a href="#" class="link-podcatalog">Костюмы</a></li>
-                    <li class="item-podcatalog"><a href="#" class="link-podcatalog">Обувь</a></li>
-                    <li class="item-podcatalog"><a href="#" class="link-podcatalog">Толстовки</a></li>
-                    <li class="item-podcatalog"><a href="#" class="link-podcatalog">Перчатки</a></li>
-                    <li class="item-podcatalog"><a href="#" class="link-podcatalog">Куртки</a></li>
+                    <li class="item-podcatalog"><a href="#" data-podcatalog="costums" class="link-podcatalog">Костюмы</a></li>
+                    <li class="item-podcatalog"><a href="#" data-podcatalog="obuv" class="link-podcatalog">Обувь</a></li>
+                    <li class="item-podcatalog"><a href="#" data-podcatalog="tolstovki" class="link-podcatalog">Толстовки</a></li>
+                    <li class="item-podcatalog"><a href="#" data-podcatalog="perchatki" class="link-podcatalog">Перчатки</a></li>
+                    <li class="item-podcatalog"><a href="#" data-podcatalog="curtki" class="link-podcatalog">Куртки</a></li>
                 </ul>
                 <ul class="list-podcatalog">
                     <span>Снаряжение</span>
-                    <li class="item-podcatalog"><a href="#" class="link-podcatalog">Термосы</a></li>
-                    <li class="item-podcatalog"><a href="#" class="link-podcatalog">Ножи</a></li>
-                    <li class="item-podcatalog"><a href="#" class="link-podcatalog">Фонари</a></li>
-                    <li class="item-podcatalog"><a href="#" class="link-podcatalog">Выживание</a></li>
-                    <li class="item-podcatalog"><a href="#" class="link-podcatalog">Защита от насекомых</a></li>
+                    <li class="item-podcatalog"><a href="#" data-podcatalog="termoses" class="link-podcatalog">Термосы</a></li>
+                    <li class="item-podcatalog"><a href="#" data-podcatalog="nozhi" class="link-podcatalog">Ножи</a></li>
+                    <li class="item-podcatalog"><a href="#" data-podcatalog="fonari" class="link-podcatalog">Фонари</a></li>
+                    <li class="item-podcatalog"><a href="#" data-podcatalog="vyzhivanie" class="link-podcatalog">Выживание</a></li>
+                    <li class="item-podcatalog"><a href="#" data-podcatalog="medecina" class="link-podcatalog">Медицина</a></li>
                 </ul>
                 <ul class="list-podcatalog">
                     <span>Зимнее</span>
-                    <li class="item-podcatalog"><a href="#" class="link-podcatalog">Лыжи, снегоступы</a></li>
-                    <li class="item-podcatalog"><a href="#" class="link-podcatalog">Зимние палатки</a></li>
-                    <li class="item-podcatalog"><a href="#" class="link-podcatalog">Печки</a></li>
-                    <li class="item-podcatalog"><a href="#" class="link-podcatalog">Санки</a></li>
-                    <li class="item-podcatalog"><a href="#" class="link-podcatalog">Ледорорубы</a></li>
+                    <li class="item-podcatalog"><a href="#" data-podcatalog="zimpalatki" class="link-podcatalog">Зимние палатки</a></li>
+                    <li class="item-podcatalog"><a href="#" data-podcatalog="lyzhi" class="link-podcatalog">Лыжи, снегоступы</a></li>
+                    <li class="item-podcatalog"><a href="#" data-podcatalog="pechi" class="link-podcatalog">Печки</a></li>
                 </ul>
             </div>
             <div class="blc-btn-podcatalog">

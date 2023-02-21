@@ -63,3 +63,12 @@ function get_user_by_email($connect, $el){
 function hash_password($pass, $hash){
     return password_verify($pass, $hash);
 }
+
+// ========== ФУНКЦИИ ДЛЯ ПОЛУЧЕНИЕЯ ТОВАРОВ ИЗ БД ==========
+
+function get_products_by_podcategory($connect, $prod){
+    $sql = "SELECT * FROM products WHERE podcategory = '$prod'";
+    $data = mysqli_query($connect, $sql);
+    $data = mysqli_fetch_all($data);
+    return $data;
+}
