@@ -101,6 +101,7 @@ async function get_products(event) {
     event.preventDefault();
     block_products.innerHTML = '';
     let prod = this.getAttribute('data-podcatalog'); // название искомой подкатегории
+    localStorage.podcatalog = prod;
     await fetch(`../server/index.php?product=${prod}`)
         .then(data => data.json())
         .then(data => {
@@ -143,7 +144,7 @@ function create_card_product(prod) {
 }
 
 async function get_all_products() {
-    await fetch(`../server/index.php?product=all`)
+    await fetch(`../server/index.php?product=${localStorage.podcatalog}`)
         .then(data => data.json())
         .then(data => {
             console.log(data);
@@ -155,3 +156,10 @@ async function get_all_products() {
 get_all_products();
 
 // получение товаров определенной подкатегории
+
+// ================
+
+// function flag_localstorage(){
+//     localStorage.podcatalog = 'all';
+// }
+// flag_localstorage();

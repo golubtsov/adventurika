@@ -158,34 +158,7 @@ session_start();
                     </div>
 
                     <div class="blc-window-products">
-                        <div class="blc-card-prod">
-                            <div class="blc-img-prod">
-                                <img src="https://www.kant.ru/upload/resize_cache/iblock/1be/224_176_1/1bed7755c8a485172c23a0a2a3f5c398.jpg" class="img-prod" alt="">
-                            </div>
-                            <div class="blc-popular-prod">
-                                <ul class="raiting">
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                </ul>
-                            </div>
-                            <div class="blc-name-prod">
-                                <a class="link-title-prod">
-                                    <span>Палатка BTrace 2023 Glade 3</span>
-                                </a>
-                            </div>
-                            <div class="blc-price-prod">
-                                <span class="text-price">3220 &#8381;</span>
-                            </div>
-                            <div class="blc-btn-add">
-                                <button class="btn-add">Смотреть</button>
-                            </div>
-                            <!-- <div class="blc-btn-add">
-                                <button class="btn-save">Сохранить</button>
-                            </div> -->
-                        </div>
+                        
                     </div>
                 </div>
 
