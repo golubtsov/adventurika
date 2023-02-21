@@ -140,6 +140,29 @@
     grid-template-columns: repeat(4, 1fr);
 }
 
+.blc-btn-get-more {
+    width: 100%;
+}
+
+.btn-get-more {
+    display: block;
+    margin: 25px auto;
+    cursor: pointer;
+    padding: 8px 20px;
+    border: none;
+    background-color: #31be90;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #33333374;
+    transition: all 0.3s ease-in;
+    font-size: 22px;
+}
+
+.btn-get-more:hover {
+    transform: scale(0.98);
+    box-shadow: 0 0 5px #3333338a;
+}
+
 @media screen and (max-width: 1600px) {
     .blc-window-products {
         grid-template-columns: repeat(3, 1fr);

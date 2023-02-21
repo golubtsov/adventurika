@@ -1,37 +1,39 @@
-<?php 
+<?php
 session_start();
 ?>
 
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Туристический магазин | Адвентурика</title>
 
-    <link type="image/x-icon"  href="/images/favicon/favicon.ico" rel="shortcut icon">
+    <link type="image/x-icon" href="/images/favicon/favicon.ico" rel="shortcut icon">
 
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/catalog.css">
     <link rel="stylesheet" href="/style/card_prod.css">
     <link rel="stylesheet" href="/style/footer.css">
-    
+
 </head>
+
 <body>
     <div class="wrapper">
 
         <!-- header.css -->
         <div class="blc-black-line">
-        <?php 
-                if($_SESSION['name']){
-                    echo '<div class="blc-name-user">
+            <?php
+            if ($_SESSION['name']) {
+                echo '<div class="blc-name-user">
                             <div class="name-user">
                                 <ion-icon class="icon-name-user" name="log-out-outline"></ion-icon>
                                 <p>' . $_SESSION['name'] . '</p>
                             </div>
                         </div>';
-                }
+            }
             ?>
         </div>
         <header>
@@ -50,7 +52,8 @@ session_start();
                         <br>
                         - по телефону - ежедневно 9:00-21:00
                         <br>
-                        - через сайт - круглосуточно</p>
+                        - через сайт - круглосуточно
+                    </p>
                 </div>
                 <div class="blc-basket">
                     <a href="/basket/basket.php" class="link-basket">
@@ -158,7 +161,10 @@ session_start();
                     </div>
 
                     <div class="blc-window-products">
-                        
+
+                    </div>
+                    <div class="blc-btn-get-more">
+                        <button class="btn-get-more">Смотреть еще</button>
                     </div>
                 </div>
 
@@ -189,13 +195,14 @@ session_start();
         </footer>
     </div>
 
-    
+
     <!-- подключение библиотеки c иконками https://ionic.io/ionicons/usage -->
-    
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    
+
     <script src="/script/menu.js"></script>
     <script src="/script/catalog/catalog.js"></script>
 </body>
+
 </html>
