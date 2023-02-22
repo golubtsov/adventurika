@@ -81,7 +81,7 @@ session_start();
         </nav>
         <ul class="nav-items adapt">
             <li class="nav-item"><a href="/" class="nav-link">Главная</a></li>
-            <li class="nav-item"><a href="/catalog/catalog.php" class="nav-link">Каталог</a></li>
+            <li class="nav-item"><a href="/catalog/catalog.php" class="nav-link link-catalog">Каталог</a></li>
             <li class="nav-item"><a href="" class="nav-link">О мгагзине</a></li>
             <li class="nav-item"><a href="" class="nav-link">Корзина</a></li>
             <li class="nav-item"><a href="" class="nav-link">Вход</a></li>
@@ -165,6 +165,9 @@ session_start();
                     </div>
                     <div class="blc-btn-get-more">
                         <button class="btn-get-more">Смотреть еще</button>
+                    </div>
+                    <div class="blc-download">
+                        <p class="text-download">Идет загрузка ...</p>
                     </div>
                 </div>
 

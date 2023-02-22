@@ -1,4 +1,11 @@
-// открытие / закрытие подкаталога
+// ССЫЛКА КАТАЛОГ, ПРИСВАЕВАЕТ LOCALSTORAGE.PODCATALOG = ALL, ЧТОБЫ ПРИ КЛИКЕ ПО НЕЙ ЗАГРУЖАЛИСЬ ВСЕ КАТЕГОРИИ ТОВАРОВ
+
+const link_catalog = document.querySelector('.link-catalog');
+link_catalog.addEventListener('click', () => {
+    localStorage.podcatalog = 'all';
+});
+
+// ОТКРЫТИЕ / ЗАКРЫТИЕ ПОДКАТАЛОГА
 const blc_lists_podcatalog = document.querySelector('.blc-lists-podcatalog');
 
 const lists_podcatalog = document.querySelectorAll('.list-podcatalog');
@@ -49,9 +56,9 @@ function get_catalog() {
     }, 600);
 }
 
-// открытие / закрытие подкаталога
+// ==========
 
-// работа блока фильтр, когда он нагодится сверху 
+// РАБОТА БЛОКА ФИЛЬТР, КОГДА ОН НАХОДИТСЯ СВЕРХУ
 
 const form_filtr = document.querySelector('.form-filtr');
 
@@ -86,9 +93,9 @@ function get_blc_filtr() {
     }, 600);
 }
 
-// работа блока фильтр, когда он нагодится сверху 
+// ==========
 
-// получение товаров определенной подкатегории
+// ПОЛУЧЕНИЕ ТОВАРОВ ОПРЕДЕЛЕННОЙ ПОДКАТЕГОРИИ
 
 const block_products = document.querySelector('.blc-window-products');
 
@@ -143,23 +150,30 @@ function create_card_product(prod) {
     `;
 }
 
+let offset = 0; // переменная для определения с какой позиции начинать брать данные из бд
+let limit = 12; // переменная - сколько брать элементов из бд
+
 async function get_all_products() {
-    await fetch(`../server/index.php?product=${localStorage.podcatalog}`)
+    await fetch(`../server/index.php?product=${localStorage.podcatalog}&limit=${limit}&offset=${offset}`)
         .then(data => data.json())
         .then(data => {
             console.log(data);
-            for (let i = 0; i < 10; i++) {
+            for (let i = 0; i < data.length; i++) {
                 create_card_product(data[i]);
             }
+            blc_download.style.display = 'none';
         })
+    offset = limit;
+    limit += 12;
 }
 get_all_products();
 
-// получение товаров определенной подкатегории
+const blc_download = document.querySelector('.blc-download');
 
-// ================
+const btn_get_more = document.querySelector('.btn-get-more');
+btn_get_more.addEventListener('click', () => {
+    blc_download.style.display = 'block';
+    get_all_products();
+});
 
-// function flag_localstorage(){
-//     localStorage.podcatalog = 'all';
-// }
-// flag_localstorage();
+// ==========

@@ -1,37 +1,40 @@
-<?php 
+<?php
 session_start();
 ?>
 
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О мгагзине</title>
 
-    <link type="image/x-icon"  href="/images/favicon/favicon.ico" rel="shortcut icon">
+    <link type="image/x-icon" href="/images/favicon/favicon.ico" rel="shortcut icon">
 
     <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/basket.css">
     <!-- <link rel="stylesheet" href="/style/card_prod.css"> -->
     <!-- <link rel="stylesheet" href="/style/main.css"> -->
     <link rel="stylesheet" href="/style/footer.css">
-    
+
 </head>
+
 <body>
     <div class="wrapper">
 
         <!-- header.css -->
         <div class="blc-black-line">
-        <?php 
-                if($_SESSION['name']){
-                    echo '<div class="blc-name-user">
+            <?php
+            if ($_SESSION['name']) {
+                echo '<div class="blc-name-user">
                             <div class="name-user">
                                 <ion-icon class="icon-name-user" name="log-out-outline"></ion-icon>
                                 <p>' . $_SESSION['name'] . '</p>
                             </div>
                         </div>';
-                }
+            }
             ?>
         </div>
         <header>
@@ -50,7 +53,8 @@ session_start();
                         <br>
                         - по телефону - ежедневно 9:00-21:00
                         <br>
-                        - через сайт - круглосуточно</p>
+                        - через сайт - круглосуточно
+                    </p>
                 </div>
                 <div class="blc-basket">
                     <a href="/login/login.php" class="link-basket">
@@ -87,7 +91,48 @@ session_start();
 
         <div class="content">
 
-            
+            <div class="blc-basket-wrapper">
+                <div class="blc-basket-content">
+                    <div class="blc-title-basket">
+                        <h2 class="title-basket">Корзина</h2>
+                    </div>
+                    <hr>
+                    <div class="blc-products">
+                        <!-- <div class="blc-product">
+                            <div class="blc-img-product">
+                                <img src="https://adventurica.ru/media/thumbnail/product/2014/2014_7_250x250.jpg" alt="" class="img-product">
+                            </div>
+                            <div class="blc-name-product">
+                                <h3 class="title-product">Палатка</h3>
+                            </div>
+                            <div class="blc-price-product">
+                                <p class="value-price">2000 руб.</p>
+                            </div>
+                            <div class="blc-count-product">
+                                <div class="count-product">
+                                    <button class="btn-count minus">-</button>
+                                    <span class="value-count">1 <span>шт.</span></span>
+                                    <button class="btn-count plus">+</button>
+                                </div>
+                            </div>
+                            <div class="blc-btn-remove">
+                                <button class="btn-remove-product">Удалить</button>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="blc-form-oder">
+                    <form action="" class="form-oder">
+                        <h3 class="ttile-form">Выбирите пункт выдачи:</h3>
+                        <p class="item-adres"><input type="checkbox" name="adres" id=""> Адрес 1</p>
+                        <p class="item-adres"><input type="checkbox" name="adres" id=""> Адрес 2</p>
+                        <p class="item-adres"><input type="checkbox" name="adres" id=""> Адрес 3</p>
+                        <button class="btn-create-oder">Оформить заказ</button>
+                    </form>
+                </div>
+                <!-- <div class="blc-btn-create-oder">
+                </div> -->
+            </div>
 
         </div>
 
@@ -121,6 +166,8 @@ session_start();
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="../script/basket/basket.js"></script>
 
 </body>
+
 </html>

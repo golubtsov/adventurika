@@ -120,14 +120,14 @@ session_start();
         </footer>
     </div>
 
-    <script src="/script/menu.js"></script>
-
+    
     <!-- подключение библиотеки c иконками https://ionic.io/ionicons/usage -->
-
+    
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-    <script src="../script/product/product.js"></script>
+    
+    <script src="/script/menu.js"></script>
+    <script type="module" src="../script/product/product.js"></script>
 
 </body>
 </html>

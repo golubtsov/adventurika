@@ -73,8 +73,8 @@ function get_products_by_podcategory($connect, $prod){
     return $data;
 }
 
-function get_all_products($connect){
-    $sql = "SELECT * FROM products";
+function get_all_products($connect, $limit, $offset){
+    $sql = "SELECT * FROM products LIMIT $limit OFFSET $offset";
     $data = mysqli_query($connect, $sql);
     $data = mysqli_fetch_all($data);
     return $data;

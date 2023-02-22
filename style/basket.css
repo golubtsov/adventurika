@@ -1,0 +1,123 @@
+.blc-basket-wrapper {
+    width: 100%;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.blc-basket-content {
+    width: 80%;
+    margin: 50px auto;
+    border: 1px solid #6666667c;
+}
+
+.blc-title-basket {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.blc-products {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.blc-product {
+    width: 90%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+    border: 1px solid #6666667c;
+}
+
+.img-product {
+    display: block;
+    width: 100%;
+    border-right: 1px solid #6666667c;
+}
+
+.blc-name-product, 
+.blc-price-product,
+.blc-count-product,
+.blc-btn-remove {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-product {
+    text-align: center;
+}
+
+.count-product {
+    margin: auto;
+    display: flex;
+}
+
+.btn-count,
+.value-count,
+.btn-remove-product {
+    margin: 0 5px;
+    padding: 4px;
+    font-size: 16px;
+    border: 1px solid #6666667c;
+    border-radius: 5px;
+}
+
+.value-count {
+    width: 40px;
+    text-align: center;
+}
+
+.btn-count {
+    width: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    background-color: #31be90;
+    color: white;
+}
+
+.btn-remove-product {
+    cursor: pointer;
+    padding: 4px 10px;
+    color: #ffffff;
+    background-color: #fe383c;
+    border: none;
+}
+
+/* .blc-btn-create-oder {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+} */
+
+.blc-form-oder {
+    width: 100%;
+    margin: 30px auto;
+}
+
+.form-oder {
+    width: 60%;
+    margin: auto;
+}
+
+.btn-create-oder {
+    padding: 5px 12px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    background-color: #31be90;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #33333374;
+    margin: 10px 0;
+}
+
+.item-adres,
+.ttile-form {
+    margin: 10px 0;
+}

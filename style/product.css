@@ -74,12 +74,6 @@
     color: white;
     border-radius: 5px;
     box-shadow: 0 0 5px #33333374;
-    transition: all 0.3s ease-in;
-}
-
-.btn-add-basket:hover {
-    transform: scale(0.98);
-    box-shadow: 0 0 5px #3333338a;
 }
 
 .blc-description {

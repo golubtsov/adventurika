@@ -10,10 +10,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     if (isset($_GET['product'])) {
         $product = $_GET['product'];
+        $limit = $_GET['limit'];
+        $offset = $_GET['offset'];
         $result = [];
         switch ($product) {
             case 'all':
-                $products = get_all_products($connect);
+                $products = get_all_products($connect, $limit, $offset);
                 foreach ($products as $el) {
                     $prod = new Product(
                         $el[0],

@@ -1,10 +1,13 @@
+import Product from '../C_Product/Product.js';
+
 function get_id_from_url() {
     let url = window.location.href;
     let param = new URL(url).search.substring(4);
     get_product_by_id(param);
 }
+get_id_from_url();
 
-async function get_product_by_id(id){
+async function get_product_by_id(id) {
     await fetch(`../server/index.php?id=${id}`)
         .then(data => data.json())
         .then(data => {
@@ -12,8 +15,7 @@ async function get_product_by_id(id){
         })
 }
 
-function create_page_prod(prod){
-    // create_list_description(prod[9]);
+function create_page_prod(prod) {
     const main_blc_product = document.querySelector('.main-blc-product');
     main_blc_product.innerHTML = `
     <div class="blc-images">
@@ -28,7 +30,7 @@ function create_page_prod(prod){
     </div>
     <div class="blc-info-prod">
         <div class="blc-title-name-prod">
-            <h1 class="title-namr-prod">${prod[1]}</h1>
+            <h1 class="title-name-prod">${prod[1]}</h1>
         </div>
         <div class="blc-code-prod">
             <span class="mini-blc-code-prod">Код товара: ${prod[0]}</span>
@@ -45,9 +47,14 @@ function create_page_prod(prod){
         </div>
     </div>
     `;
+
+    const btn_add_basket = document.querySelector('.btn-add-basket');
+    btn_add_basket.addEventListener('click', () => {
+        add_basket(prod[0], prod[1], prod[3], prod[2]);
+    });
 }
 
-function create_list_description(descript){
+function create_list_description(descript) {
     console.log(descript);
     let str_description = descript.split(',');
     let list_description = '';
@@ -61,4 +68,38 @@ function create_list_description(descript){
     return list_description;
 }
 
-get_id_from_url();
+// ДОБАВЛЕНИЕ ТОВАРА В КОРЗИНУ
+
+function add_basket(id, name, price, img) {
+    let product = new Product(id, name, price, img);
+    let basket = get_basket();
+    if(check_basket(product.id, basket) == false){
+        basket = [...basket, product];
+        send_basket(basket);
+    } else {
+        alert(check_basket(product.id, basket));
+    }
+}
+
+function check_basket(id_prod, basket) {
+    for (const el of basket) {
+        if(el.id == id_prod){
+            return 'Уже добавлен!';
+        }
+    }
+    return false;
+}
+
+function get_basket(){
+    let basket = JSON.parse(localStorage.basket);
+    return basket;
+}
+
+function send_basket(basket){
+    localStorage.basket = JSON.stringify(basket);
+    alert('Товар добавлен в корзину!');
+}
+
+// ==========
+
+// export default get_basket;
