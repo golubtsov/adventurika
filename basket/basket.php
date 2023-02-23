@@ -98,28 +98,11 @@ session_start();
                     </div>
                     <hr>
                     <div class="blc-products">
-                        <!-- <div class="blc-product">
-                            <div class="blc-img-product">
-                                <img src="https://adventurica.ru/media/thumbnail/product/2014/2014_7_250x250.jpg" alt="" class="img-product">
-                            </div>
-                            <div class="blc-name-product">
-                                <h3 class="title-product">Палатка</h3>
-                            </div>
-                            <div class="blc-price-product">
-                                <p class="value-price">2000 руб.</p>
-                            </div>
-                            <div class="blc-count-product">
-                                <div class="count-product">
-                                    <button class="btn-count minus">-</button>
-                                    <span class="value-count">1 <span>шт.</span></span>
-                                    <button class="btn-count plus">+</button>
-                                </div>
-                            </div>
-                            <div class="blc-btn-remove">
-                                <button class="btn-remove-product">Удалить</button>
-                            </div>
-                        </div> -->
+                        <p>Здесь еще ничего нет.</p>
                     </div>
+                </div>
+                <div class="blc-altogether-price">
+                    <h3 class="altogether-price">Всего: <span>0</span> руб.</h3>
                 </div>
                 <div class="blc-form-oder">
                     <form action="" class="form-oder">
@@ -130,8 +113,6 @@ session_start();
                         <button class="btn-create-oder">Оформить заказ</button>
                     </form>
                 </div>
-                <!-- <div class="blc-btn-create-oder">
-                </div> -->
             </div>
 
         </div>
