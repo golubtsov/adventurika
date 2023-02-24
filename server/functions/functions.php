@@ -88,3 +88,16 @@ function get_product_by_id($connect, $id){
     $data = mysqli_fetch_all($data);
     return $data[0];
 }
+
+// ========== ФУНКЦИИ ДЛЯ СОЗДАНИЯ ЗАКАЗА И ЗАНЕСЕНИЯ ЕГО В БД
+
+// разбиваем заказ на отдельные продукты, добавляем к этому данные пользователя и записываем в бд
+function send_oder($connect, $oder){
+    $sql = "INSERT INTO `oders`(`num_oder`, `user_email`, `prod_id`, `prod_name`, `prod_count`, `price`, `adres`) VALUES ($oder->num_oder, '$oder->email_user', $oder->id_prod, '$oder->name_prod', $oder->count_prod, $oder->price, '$oder->adres')";
+    mysqli_query($connect, $sql);
+}
+
+function create_num_oder(){
+    return rand(100000, 999999);
+}
+

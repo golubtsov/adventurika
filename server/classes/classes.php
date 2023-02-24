@@ -66,3 +66,34 @@ class Product{
         $this->gender = $gender;
     }
 }
+
+// класс для заказов
+
+class Oder {
+    public $email_user;
+    public $num_oder;
+    public $id_prod;
+    public $name_prod;
+    public $count_prod;
+    public $price;
+    public $adres;
+
+    public function __construct(
+        $email_user,
+        $num_oder,
+        $id_prod,
+        $name_prod,
+        $count_prod,
+        $price,
+        $adres
+    )
+    {
+        $this->email_user = $email_user;
+        $this->num_oder = $num_oder;
+        $this->id_prod = $id_prod;
+        $this->name_prod = $name_prod;
+        $this->count_prod = $count_prod;
+        $this->price = $price;
+        $this->adres = $adres;
+    }
+}

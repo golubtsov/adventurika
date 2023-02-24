@@ -9,14 +9,12 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О мгагзине</title>
+    <title>Корзина</title>
 
     <link type="image/x-icon" href="/images/favicon/favicon.ico" rel="shortcut icon">
 
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/basket.css">
-    <!-- <link rel="stylesheet" href="/style/card_prod.css"> -->
-    <!-- <link rel="stylesheet" href="/style/main.css"> -->
     <link rel="stylesheet" href="/style/footer.css">
 
 </head>
@@ -83,38 +81,35 @@ session_start();
         <ul class="nav-items adapt">
             <li class="nav-item"><a href="/" class="nav-link">Главная</a></li>
             <li class="nav-item"><a href="/catalog/catalog.php" class="nav-link">Каталог</a></li>
-            <li class="nav-item"><a href="" class="nav-link">О мгагзине</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Корзина</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Вход</a></li>
+            <li class="nav-item"><a href="/about/about.php" class="nav-link">О мгагзине</a></li>
+            <li class="nav-item"><a href="/login/login.php" class="nav-link">Вход</a></li>
         </ul>
         <!-- header.css -->
 
         <div class="content">
-
             <div class="blc-basket-wrapper">
-                <div class="blc-basket-content">
-                    <div class="blc-title-basket">
-                        <h2 class="title-basket">Корзина</h2>
+                <form class="form-oder">
+                    <div class="blc-basket-content">
+                        <div class="blc-title-basket">
+                            <h2 class="title-basket">Корзина</h2>
+                        </div>
+                        <hr>
+                        <div class="blc-products">
+                            <p>Здесь еще ничего нет.</p>
+                        </div>
                     </div>
-                    <hr>
-                    <div class="blc-products">
-                        <p>Здесь еще ничего нет.</p>
+                    <div class="blc-altogether-price">
+                        <h3 class="altogether-price">Всего: <span name="all_price">0</span> руб.</h3>
                     </div>
-                </div>
-                <div class="blc-altogether-price">
-                    <h3 class="altogether-price">Всего: <span>0</span> руб.</h3>
-                </div>
-                <div class="blc-form-oder">
-                    <form action="" class="form-oder">
+                    <div class="blc-form-oder">
                         <h3 class="ttile-form">Выбирите пункт выдачи:</h3>
-                        <p class="item-adres"><input type="checkbox" name="adres" id=""> Адрес 1</p>
-                        <p class="item-adres"><input type="checkbox" name="adres" id=""> Адрес 2</p>
-                        <p class="item-adres"><input type="checkbox" name="adres" id=""> Адрес 3</p>
+                        <p class="item-adres"><input type="checkbox" name="adres" id="adres_1"> Адрес 1</p>
+                        <p class="item-adres"><input type="checkbox" name="adres" id="adres_2"> Адрес 2</p>
+                        <p class="item-adres"><input type="checkbox" name="adres" id="adres_3"> Адрес 3</p>
                         <button class="btn-create-oder">Оформить заказ</button>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
-
         </div>
 
         <footer>
@@ -147,6 +142,7 @@ session_start();
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
     <script type="module" src="../script/basket/basket.js"></script>
 
 </body>

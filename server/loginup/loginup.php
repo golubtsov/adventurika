@@ -1,7 +1,5 @@
 <?php
 
-use function PHPSTORM_META\type;
-
 session_start();
 
 include_once('../db/db.php');
@@ -23,6 +21,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     if(password_verify($password, $user[0][1])){
         $_SESSION['name'] = $email;
+        setcookie('email', $_POST['email'], 0, '/');
         header('Location: ../../index.php');
     } else {
         $_SESSION['error'] = 'Неправильный логин или пароль.';

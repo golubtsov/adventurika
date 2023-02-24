@@ -18,3 +18,13 @@ CREATE TABLE products(
     desctiption varchar(3000), 
     gender boolean 
 );
+
+CREATE TABLE oders( 
+    num_oder int, 
+    user_email varchar(100), 
+    prod_id int, 
+    prod_name varchar(200), 
+    prod_count int, 
+    price int,
+    adres varchar(100)
+);
