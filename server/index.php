@@ -8,7 +8,7 @@ header('Content-type: application/json; charset=utf-8');
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
-    if (isset($_GET['product'])) {
+    if (isset($_GET['product']) && isset($_GET['limit']) && isset($_GET['offset'])) {
         $product = $_GET['product'];
         $limit = $_GET['limit'];
         $offset = $_GET['offset'];

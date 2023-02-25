@@ -104,10 +104,11 @@ session_start();
                     </div>
                     <div class="blc-form-oder">
                         <h3 class="ttile-form">Выбирите пункт выдачи:</h3>
-                        <p class="item-adres"><input type="checkbox" name="adres" id="adres_1"> Адрес 1</p>
-                        <p class="item-adres"><input type="checkbox" name="adres" id="adres_2"> Адрес 2</p>
-                        <p class="item-adres"><input type="checkbox" name="adres" id="adres_3"> Адрес 3</p>
+                        <p class="item-adres"><input type="checkbox" name="adres" id="Алтайский край, Барнаул, улица Малахова, 65"> Алтайский край, Барнаул, улица Малахова, 65</p>
+                        <p class="item-adres"><input type="checkbox" name="adres" id="Алтайский край, Барнаул, проспект Ленина, 87А"> Алтайский край, Барнаул, проспект Ленина, 87А</p>
+                        <p class="item-adres"><input type="checkbox" name="adres" id="Алтайский край, Барнаул, Социалистический проспект, 29"> Алтайский край, Барнаул, Социалистический проспект, 29</p>
                         <button class="btn-create-oder">Оформить заказ</button>
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8d971ea008102fbfa0e5aa2e436f77bd4090f336000fdd26895bcf0b5f967baa&amp;width=100%25&amp;height=250&amp;lang=ru_RU&amp;scroll=true"></script>
                     </div>
                 </form>
             </div>

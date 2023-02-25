@@ -133,37 +133,7 @@ session_start();
             <div class="container">
 
                 <div class="blc-products">
-                    <div class="blc-filtr">
-                        <div class="blc-title-filtr">
-                            <h3 class="title-filtr">Фильтры</h3>
-                        </div>
-                        <form method="POST" name="filtr" class="form-filtr">
-                            <select name="mobile-sort" id="mobile-sort">
-                                <option value="popular">Популярное</option>
-                                <option value="cheap">Сначала дешевле</option>
-                                <option value="expensive">Сначала дороже</option>
-                                <option value="new">Новинки</option>
-                            </select>
-
-                            <h4>Пол</h4>
-                            <select name="gender" id="gender">
-                                <option value="gender">Любой</option>
-                                <option value="man">Мужской</option>
-                                <option value="woman">Женский</option>
-                            </select>
-
-                            <h4>Цена</h4>
-                            <div class="blc-interval">
-                                <span class="sign-input"><input name="from" type="text" placeholder="от"></span>
-                                <span class="sign-input"><input name="to" type="text" placeholder="до"> руб</span>
-                            </div>
-
-                            <button type="submit">Применить</button>
-                        </form>
-                    </div>
-
                     <div class="blc-window-products">
-
                     </div>
                     <div class="blc-btn-get-more">
                         <button class="btn-get-more">Смотреть еще</button>

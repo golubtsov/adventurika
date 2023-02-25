@@ -56,20 +56,18 @@ function get_catalog() {
     }, 600);
 }
 
-// ==========
-
 // РАБОТА БЛОКА ФИЛЬТР, КОГДА ОН НАХОДИТСЯ СВЕРХУ
 
-const form_filtr = document.querySelector('.form-filtr');
+// const form_filtr = document.querySelector('.form-filtr');
 
-const btn_filtr = document.querySelector('.title-filtr');
-btn_filtr.addEventListener('click', () => {
-    if (check_active(btn_filtr)) {
-        remove_blc_filtr();
-    } else {
-        get_blc_filtr();
-    }
-});
+// const btn_filtr = document.querySelector('.title-filtr');
+// btn_filtr.addEventListener('click', () => {
+//     if (check_active(btn_filtr)) {
+//         remove_blc_filtr();
+//     } else {
+//         get_blc_filtr();
+//     }
+// });
 
 function remove_blc_filtr() {
     btn_filtr.classList.remove('active');
@@ -92,8 +90,6 @@ function get_blc_filtr() {
         form_filtr.style.opacity = 1;
     }, 600);
 }
-
-// ==========
 
 // ПОЛУЧЕНИЕ ТОВАРОВ ОПРЕДЕЛЕННОЙ ПОДКАТЕГОРИИ
 
@@ -176,4 +172,4 @@ btn_get_more.addEventListener('click', () => {
     get_all_products();
 });
 
-// ==========
+
