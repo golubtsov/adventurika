@@ -2,7 +2,6 @@ const blc_basket = document.querySelector('.blc-products');
 const altogether_price = document.querySelector('.altogether-price span');
 
 function get_basket() {
-    console.log('get_basket');
     let basket = JSON.parse(localStorage.basket);
     if (basket.length != 0) {
         blc_basket.innerHTML = '';
@@ -32,7 +31,9 @@ function create_card_product(prod) {
             <img src="${prod.img}" alt="" class="img-product">
         </div>
         <div class="blc-name-product">
-            <h3 name="name_prod" class="title-product">${prod.name}</h3>
+            <a href="/catalog/product.php?id=${prod.id}" class="link-prod">
+                <h3 name="name_prod" class="title-product">${prod.name}</h3>
+            </a>
         </div>
         <div class="blc-price-product">
             <p class="value-price"><span data-price="${prod.id}">${prod.price}</span> руб.</p>

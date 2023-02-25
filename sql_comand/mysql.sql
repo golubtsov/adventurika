@@ -26,5 +26,6 @@ CREATE TABLE oders(
     prod_name varchar(200), 
     prod_count int, 
     price int,
-    adres varchar(100)
+    adres varchar(100),
+    status varchar(15)
 );

@@ -24,13 +24,15 @@ session_start();
 
         <!-- header.css -->
         <div class="blc-black-line">
-            <?php
+        <?php
             if ($_SESSION['name']) {
                 echo '<div class="blc-name-user">
-                            <div class="name-user">
-                                <ion-icon class="icon-name-user" name="log-out-outline"></ion-icon>
-                                <p>' . $_SESSION['name'] . '</p>
-                            </div>
+                            <a href="/cabinet/cabinet.php" class="user-cabinet">
+                                <div class="name-user">
+                                    <ion-icon class="icon-name-user" name="log-out-outline"></ion-icon>
+                                    <p>' . $_SESSION['name'] . '</p>
+                                </div>
+                            </a>
                         </div>';
             }
             ?>
@@ -55,7 +57,7 @@ session_start();
                     </p>
                 </div>
                 <div class="blc-basket">
-                    <a href="/login/login.php" class="link-basket">
+                    <a href="/basket/basket.php" class="link-basket">
                         <div class="blc-img-basket">
                             <img src="/images/icon/basket.png" alt="Корзина Карабин" class="img-basket">
                         </div>
@@ -74,7 +76,6 @@ session_start();
                 <li class="nav-item"><a href="/" class="nav-link">Главная</a></li>
                 <li class="nav-item"><a href="/catalog/catalog.php" class="nav-link">Каталог</a></li>
                 <li class="nav-item"><a href="/about/about.php" class="nav-link">О мгагзине</a></li>
-                <!-- <li class="nav-item"><a href="/basket/basket.php" class="nav-link">Корзина</a></li> -->
                 <li class="nav-item"><a href="/login/login.php" class="nav-link">Вход</a></li>
             </ul>
         </nav>

@@ -55,6 +55,11 @@
     text-align: center;
 }
 
+.link-prod {
+    text-decoration: none;
+    color: #666666;
+}
+
 .count-product {
     margin: auto;
     display: flex;

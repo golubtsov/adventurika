@@ -93,7 +93,7 @@ function get_product_by_id($connect, $id){
 
 // разбиваем заказ на отдельные продукты, добавляем к этому данные пользователя и записываем в бд
 function send_oder($connect, $oder){
-    $sql = "INSERT INTO `oders`(`num_oder`, `user_email`, `prod_id`, `prod_name`, `prod_count`, `price`, `adres`) VALUES ($oder->num_oder, '$oder->email_user', $oder->id_prod, '$oder->name_prod', $oder->count_prod, $oder->price, '$oder->adres')";
+    $sql = "INSERT INTO `oders`(`num_oder`, `user_email`, `prod_id`, `prod_name`, `prod_count`, `price`, `adres`, `status`) VALUES ($oder->num_oder, '$oder->email_user', $oder->id_prod, '$oder->name_prod', $oder->count_prod, $oder->price, '$oder->adres', 'active')";
     mysqli_query($connect, $sql);
 }
 
@@ -101,3 +101,22 @@ function create_num_oder(){
     return rand(100000, 999999);
 }
 
+function get_active_oders_user($connect){
+    $ressult = [];
+    $sql = "SELECT * FROM oders WHERE status = 'active'";
+    $data = mysqli_query($connect, $sql);
+    foreach(mysqli_fetch_all($data) as $el){
+        $ressult[] = $el;
+    }
+    return $ressult;
+}
+
+function get_noactive_oders_user($connect){
+    $ressult = [];
+    $sql = "SELECT * FROM oders WHERE status = 'noactive'";
+    $data = mysqli_query($connect, $sql);
+    foreach(mysqli_fetch_all($data) as $el){
+        $ressult[] = $el;
+    }
+    return $ressult;
+}

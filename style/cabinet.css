@@ -1,0 +1,89 @@
+.container {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.blc-title-cabinet {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.title-cabinet {
+    text-align: center;
+}
+
+.blc-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.blc-list-links {
+    width: 70%;
+    margin: auto;
+    margin-top: 0;
+}
+
+.list-links {
+    display: block;
+    list-style-type: none;
+}
+
+.list-link {
+    margin: 10px auto;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.blc-products {
+    width: 100%;
+    min-height: 500px;
+    text-align: center;
+    color: #666666;
+}
+
+.blc-active-oders {
+    width: 100%;
+    margin: auto;
+}
+
+.blc-active-oder {
+    width: 95%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+    border: 1px solid #6666667c;
+}
+
+.blc-active-oder div {
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+}
+
+.blc-num-oder {
+    color:  black;
+}
+
+.link-name-oder {
+    text-decoration: none;
+    color: #666666;
+    transition: all 0.3s ease-in;
+}
+
+.link-name-oder:hover {
+    text-decoration: underline;
+}
+
+.btn-logout {
+    font-size: 16px;
+    padding: 5px 15px;
+    border: none;
+    background-color: #6666667c;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.active {
+    color: #666666;
+}

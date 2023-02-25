@@ -38,6 +38,11 @@ header {
     background-color: #666;
 }
 
+.user-cabinet {
+    text-decoration: none;
+    color: white;
+}
+
 .name-user {
     display: flex;
     justify-content: center;

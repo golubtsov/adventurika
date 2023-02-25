@@ -22,16 +22,18 @@ session_start();
 
         <!-- header.css -->
         <div class="blc-black-line">
-        <?php 
-                if($_SESSION['name']){
-                    echo '<div class="blc-name-user">
-                            <div class="name-user">
-                                <ion-icon class="icon-name-user" name="log-out-outline"></ion-icon>
-                                <p>' . $_SESSION['name'] . '</p>
-                            </div>
+        <?php
+            if ($_SESSION['name']) {
+                echo '<div class="blc-name-user">
+                            <a href="/cabinet/cabinet.php" class="user-cabinet">
+                                <div class="name-user">
+                                    <ion-icon class="icon-name-user" name="log-out-outline"></ion-icon>
+                                    <p>' . $_SESSION['name'] . '</p>
+                                </div>
+                            </a>
                         </div>';
-                }
-            ?>
+            }
+        ?>
         </div>
         <header>
             <div class="head-container">

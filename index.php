@@ -20,18 +20,19 @@ session_start();
 </head>
 <body>
     <div class="wrapper">
-
         <!-- header.css -->
         <div class="blc-black-line">
-            <?php 
-                if($_SESSION['name']){
-                    echo '<div class="blc-name-user">
-                            <div class="name-user">
-                                <ion-icon class="icon-name-user" name="log-out-outline"></ion-icon>
-                                <p>' . $_SESSION['name'] . '</p>
-                            </div>
+        <?php
+            if ($_SESSION['name']) {
+                echo '<div class="blc-name-user">
+                            <a href="/cabinet/cabinet.php" class="user-cabinet">
+                                <div class="name-user">
+                                    <ion-icon class="icon-name-user" name="log-out-outline"></ion-icon>
+                                    <p>' . $_SESSION['name'] . '</p>
+                                </div>
+                            </a>
                         </div>';
-                }
+            }
             ?>
         </div>
         <header>
@@ -73,7 +74,6 @@ session_start();
                 <li class="nav-item"><a href="/catalog/catalog.php" class="nav-link">Каталог</a>
                 </li>
                 <li class="nav-item"><a href="/about/about.php" class="nav-link">О мгагзине</a></li>
-                <!-- <li class="nav-item"><a href="" class="nav-link">Корзина</a></li> -->
                 <li class="nav-item"><a href="/login/login.php" class="nav-link">Вход</a></li>
             </ul>
         </nav>
@@ -81,7 +81,6 @@ session_start();
             <li class="nav-item"><a href="/" class="nav-link">Главная</a></li>
             <li class="nav-item"><a href="/catalog/catalog.php" class="nav-link">Каталог</a></li>
             <li class="nav-item"><a href="/about/about.php" class="nav-link">О мгагзине</a></li>
-            <!-- <li class="nav-item"><a href="/basket/basket.php" class="nav-link">Корзина</a></li> -->
             <li class="nav-item"><a href="/login/login.php" class="nav-link">Вход</a></li>
         </ul>
         <!-- header.css -->

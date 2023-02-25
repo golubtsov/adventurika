@@ -1,27 +1,29 @@
-<?php 
+<?php
 session_start();
 ?>
 
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О мгагзине</title>
+    <title>Кабинет</title>
 
-    <link type="image/x-icon"  href="/images/favicon/favicon.ico" rel="shortcut icon">
+    <link type="image/x-icon" href="/images/favicon/favicon.ico" rel="shortcut icon">
 
     <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/cabinet.css">
     <link rel="stylesheet" href="/style/footer.css">
-    
+
 </head>
+
 <body>
     <div class="wrapper">
-
         <!-- header.css -->
         <div class="blc-black-line">
-        <?php
+            <?php
             if ($_SESSION['name']) {
                 echo '<div class="blc-name-user">
                             <a href="/cabinet/cabinet.php" class="user-cabinet">
@@ -50,7 +52,8 @@ session_start();
                         <br>
                         - по телефону - ежедневно 9:00-21:00
                         <br>
-                        - через сайт - круглосуточно</p>
+                        - через сайт - круглосуточно
+                    </p>
                 </div>
                 <div class="blc-basket">
                     <a href="/basket/basket.php" class="link-basket">
@@ -78,16 +81,32 @@ session_start();
         <ul class="nav-items adapt">
             <li class="nav-item"><a href="/" class="nav-link">Главная</a></li>
             <li class="nav-item"><a href="/catalog/catalog.php" class="nav-link">Каталог</a></li>
-            <li class="nav-item"><a href="" class="nav-link">О мгагзине</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Корзина</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Вход</a></li>
+            <li class="nav-item"><a href="/about/about.php" class="nav-link">О мгагзине</a></li>
+            <li class="nav-item"><a href="/login/login.php" class="nav-link">Вход</a></li>
         </ul>
         <!-- header.css -->
 
-        <div class="content">
+        <div class="container">
+            <div class="blc-title-cabinet">
+                <h2 class="title-cabinet">Личный кабинет</h2>
+            </div>
 
-            
-
+            <div class="blc-content">
+                <div class="blc-list-links">
+                    <ul class="list-links">
+                        <li id="1" class="list-link active">Мои заказы</li>
+                        <li id="2" class="list-link">История заказов</li>
+                        <li class="logout">
+                            <form action="../server/logout/logout.php" class="logout">
+                                <button class="btn-logout" type="submit">Выйти</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <div class="blc-products">
+                    <p>У вас нет активных заказов</p>
+                </div>
+            </div>
         </div>
 
         <footer>
@@ -114,12 +133,9 @@ session_start();
         </footer>
     </div>
 
-    <script src="/script/menu.js"></script>
-
-    <!-- подключение библиотеки c иконками https://ionic.io/ionicons/usage -->
-
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+    <script type="module" src="../script/menu.js"></script>
+    <script src="/script/cabinet/cabinet.js"></script>
 </body>
-</html>

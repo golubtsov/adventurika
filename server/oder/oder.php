@@ -33,4 +33,14 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
         print_r($num_oder);
     }
+
+    if($_GET['active'] == 1){
+        $active_oders = get_active_oders_user($connect);
+        print_r(json_encode($active_oders));
+    }
+
+    if($_GET['active'] == 2){
+        $no_active_oders = get_noactive_oders_user($connect);
+        print_r(json_encode($no_active_oders));
+    }
 }
