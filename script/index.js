@@ -5,3 +5,8 @@ function flag_localstorage(){
     }
 }
 flag_localstorage();
+
+// СЛАЙДЕР
+
+const line_slider = document.querySelector('.blc-slider-line');
+console.log(line_slider.style.border);

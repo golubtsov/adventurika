@@ -56,41 +56,6 @@ function get_catalog() {
     }, 600);
 }
 
-// РАБОТА БЛОКА ФИЛЬТР, КОГДА ОН НАХОДИТСЯ СВЕРХУ
-
-// const form_filtr = document.querySelector('.form-filtr');
-
-// const btn_filtr = document.querySelector('.title-filtr');
-// btn_filtr.addEventListener('click', () => {
-//     if (check_active(btn_filtr)) {
-//         remove_blc_filtr();
-//     } else {
-//         get_blc_filtr();
-//     }
-// });
-
-function remove_blc_filtr() {
-    btn_filtr.classList.remove('active');
-    form_filtr.style.opacity = 0;
-    setTimeout(() => {
-        form_filtr.style.height = 0 + 'px';
-    }, 400);
-    setTimeout(() => {
-        form_filtr.style.display = 'none';
-    }, 700);
-}
-
-function get_blc_filtr() {
-    btn_filtr.classList.add('active');
-    form_filtr.style.display = 'block';
-    setTimeout(() => {
-        form_filtr.style.height = 220 + 'px';
-    }, 400);
-    setTimeout(() => {
-        form_filtr.style.opacity = 1;
-    }, 600);
-}
-
 // ПОЛУЧЕНИЕ ТОВАРОВ ОПРЕДЕЛЕННОЙ ПОДКАТЕГОРИИ
 
 const block_products = document.querySelector('.blc-window-products');
@@ -108,7 +73,6 @@ async function get_products(event) {
     await fetch(`../server/index.php?product=${prod}`)
         .then(data => data.json())
         .then(data => {
-            console.log(data);
             for (const el of data) {
                 create_card_product(el);
             }
@@ -123,13 +87,7 @@ function create_card_product(prod) {
             <img src="${prod.img}" alt="${prod.name}">
         </div>
         <div class="blc-popular-prod">
-            <ul class="raiting">
-                <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-            </ul>
+            ${create_reating(prod.popular)}
         </div>
         <div class="blc-name-prod">
             <a class="link-title-prod">
@@ -144,6 +102,28 @@ function create_card_product(prod) {
         </div>
     </div>
     `;
+}
+
+function create_reating(popular){
+    let ul_list_reating = `<ul class="raiting">`;
+    for (let i = 0; i < popular; i++) {
+        ul_list_reating += `
+        <li class="item-star">
+            <ion-icon name="star" class="star"></ion-icon>
+        </li>
+        `;
+    }
+    if(popular != 5) {
+        for (let i = 0; i < 5 - popular; i++) {
+            ul_list_reating += `
+            <li class="item-star">
+                <ion-icon name="star-outline" class="star"></ion-icon>
+            </li>
+        `;
+        }
+    }
+    ul_list_reating += '</ul>';
+    return ul_list_reating;
 }
 
 let offset = 0; // переменная для определения с какой позиции начинать брать данные из бд
