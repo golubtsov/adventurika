@@ -1,0 +1,58 @@
+.content {
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666666;
+}
+
+.blc-info-magazine {
+    width: 90%;
+    margin: 15px auto;
+}
+
+.blc-info-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+}
+
+.blc-info {
+    width: 95%;
+    box-shadow: 0 0 5px #66666642;
+    margin: 10px auto;
+}
+
+.blc-title {
+    width: 100%;
+    margin: 10px;
+}
+
+.blc-info p {
+    margin: 10px;
+}
+
+.internet-magazine span a {
+    color: #666666;
+    font-size: 32px;
+}
+
+.list-adresa {
+    margin: 10px;
+    list-style-type: none;
+}
+
+.item-adres {
+    margin: 5px 0;
+}
+
+.carta {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+}
+
+@media screen and (max-width: 850px) {
+    .blc-info-grid {
+        grid-template-columns: 1fr;
+    }
+}

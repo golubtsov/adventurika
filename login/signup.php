@@ -104,9 +104,9 @@ session_start();
                     <p><label for="email">Email <b>*</b></label></p>
                     <p><input type="text" class="email" name="email" required></p>
                     <p><label for="password">Пароль <b>*</b></label></p>
-                    <p><input type="text" class="password" name="password" required></p>
+                    <p><input type="password" class="password" name="password" required></p>
                     <p><label for="password2">Повторите пароль <b>*</b></label></p>
-                    <p><input type="text" class="password2" name="password2" required></p>
+                    <p><input type="password" class="password2" name="password2" required></p>
                     <p><button type="submit">Зарегистрироваться</button></p>
                     <?php
                         if ($_SESSION['error']) {

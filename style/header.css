@@ -172,29 +172,6 @@ nav {
     color: #666;
 }
 
-/* .nav-items-catalog {
-    height: 0;
-    display: none;
-    margin: auto;
-    list-style-type: none;
-    background-color: #f6f6f6;
-    margin-top: 8px;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease-in;
-}
-
-.nav-items-catalog .nav-item {
-    margin: 5px;
-    padding: 10px 0;
-    opacity: 0;
-} */
-
-/* ссылка на каталог */
-/* #nav-item-catalog:hover .nav-items-catalog{
-    display: block;
-} */
-
 .btn-adapt-menu {
     width: 39.63px;
     height: 39.63px;
