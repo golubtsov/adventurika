@@ -4,25 +4,26 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О мгагзине</title>
 
-    <link type="image/x-icon"  href="/images/favicon/favicon.ico" rel="shortcut icon">
+    <link type="image/x-icon" href="/images/favicon/favicon.ico" rel="shortcut icon">
 
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/form_login.css">
     <link rel="stylesheet" href="/style/footer.css">
-    
+
 </head>
+
 <body>
     <div class="wrapper">
-
         <!-- header.css -->
         <div class="blc-black-line">
-        <?php
+            <?php
             if ($_SESSION['name']) {
                 echo '<div class="blc-name-user">
                             <a href="/cabinet/cabinet.php" class="user-cabinet">
@@ -33,7 +34,7 @@ session_start();
                             </a>
                         </div>';
             }
-        ?>
+            ?>
         </div>
         <header>
             <div class="head-container">
@@ -51,7 +52,8 @@ session_start();
                         <br>
                         - по телефону - ежедневно 9:00-21:00
                         <br>
-                        - через сайт - круглосуточно</p>
+                        - через сайт - круглосуточно
+                    </p>
                 </div>
                 <div class="blc-basket">
                     <a href="/basket/basket.php" class="link-basket">
@@ -89,36 +91,26 @@ session_start();
 
             <div class="blc-form-login">
                 <?php
-                    if ($_SESSION['message']) {
-                        echo '<div class="blc-success-msg">
-                                <p class="success-msg">' . $_SESSION['message'] . '</p>
-                            </div>';
-                        $_SESSION['message'] = '';
-                    }
+                if ($_SESSION["message"] != '') {
+                    echo '<p>' . $_SESSION["message"] . '</p>';
+                }
                 ?>
                 <div class="blc-login-title">
-                    <h2 class="login-title">Вход</h2>
+                    <h2 class="login-title">Смена пароля</h2>
                 </div>
-                <form method="POST" action="/server/loginup/loginup.php" class="form-login">
-                    <p><label for="email">Email <b>*</b></label></p>
+                <form method="POST" action="/server/recover/recover.php" class="form-login">
+                    <p><label for="email">Введите свой Email<b>*</b></label></p>
                     <p><input type="text" class="email" name="email" required></p>
-                    <p><label for="password">Пароль <b>*</b></label></p>
-                    <p><input type="password" class="password" name="password" required></p>
-                    <p><button type="submit">Войти</button></p>
+                    <p><button type="submit">Продолжить</button></p>
                     <?php
-                        if ($_SESSION['error']) {
-                            echo '<div class="blc-error-msg">
-                                    <p class="error-msg">' . $_SESSION['error'] . '</p>
-                                </div>';
-                            $_SESSION['error'] = '';
-                        }
+                    if ($_SESSION['error']) {
+                        echo '<div class="blc-error-msg">
+                        <p class="error-msg">' . $_SESSION['error'] . '</p>
+                    </div>';
+                        $_SESSION['error'] = '';
+                    }
                     ?>
                 </form>
-                <div class="blc-signup">
-                    <p class="title-signup">Не зарегистрированы?</p>
-                    <a href="/login/signup.php" class="link-signup">Зарегистрироваться</a>
-                    <a href="/login/recover.php" class="link-signup">Забыли пароль?</a>
-                </div>
 
             </div>
 
@@ -146,14 +138,6 @@ session_start();
                 </ul>
             </div>
         </footer>
+
     </div>
-
-    <script src="/script/menu.js"></script>
-
-    <!-- подключение библиотеки c иконками https://ionic.io/ionicons/usage -->
-
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
-</html>

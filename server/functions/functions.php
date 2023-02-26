@@ -143,3 +143,17 @@ function get_prod_new($connect, $count){
     return $ressult;
 }
 
+// ФУНКЦИИ ДЛЯ ВОССТАНОВЛЕНИЯ ПАРОЛЯ
+
+function get_hash_password($connect, $email){
+    $sql = "SELECT pass FROM users WHERE email = '$email'";
+    $hash = mysqli_query($connect, $sql);
+    return mysqli_fetch_row($hash);
+}
+
+function change_password($connect, $hash, $new_pass){
+    $sql = "UPDATE users SET pass = '$new_pass' WHERE pass = '$hash';";
+    if(mysqli_query($connect, $sql)){
+        return true;
+    }
+}
