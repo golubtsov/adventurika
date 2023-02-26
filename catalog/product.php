@@ -1,30 +1,32 @@
-<?php 
+<?php
 session_start();
 ?>
 
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О мгагзине</title>
 
-    <link type="image/x-icon"  href="/images/favicon/favicon.ico" rel="shortcut icon">
+    <link type="image/x-icon" href="/images/favicon/favicon.ico" rel="shortcut icon">
 
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/card_prod.css">
-    <!-- <link rel="stylesheet" href="/style/main.css"> -->
     <link rel="stylesheet" href="/style/product.css">
     <link rel="stylesheet" href="/style/footer.css">
-    
+    <link rel="stylesheet" href="/style/popap.css">
+
 </head>
+
 <body>
     <div class="wrapper">
 
         <!-- header.css -->
         <div class="blc-black-line">
-        <?php
+            <?php
             if ($_SESSION['name']) {
                 echo '<div class="blc-name-user">
                             <a href="/cabinet/cabinet.php" class="user-cabinet">
@@ -53,7 +55,8 @@ session_start();
                         <br>
                         - по телефону - ежедневно 9:00-21:00
                         <br>
-                        - через сайт - круглосуточно</p>
+                        - через сайт - круглосуточно
+                    </p>
                 </div>
                 <div class="blc-basket">
                     <a href="/basket/basket.php" class="link-basket">
@@ -91,7 +94,7 @@ session_start();
         <div class="content">
 
             <div class="main-blc-product">
-               
+
             </div>
 
         </div>
@@ -122,14 +125,28 @@ session_start();
         </footer>
     </div>
 
-    
+    <div class="blc-popap">
+        <div class="blc-window-popap">
+            <div class="blc-close">
+                <div class="btn-close">
+                    <ion-icon class="close-outline" name="close-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="blc-content">
+                <p class="text-info">Что-то пошло не так.</p>
+            </div>
+        </div>
+    </div>
+
     <!-- подключение библиотеки c иконками https://ionic.io/ionicons/usage -->
-    
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    
+
     <script src="/script/menu.js"></script>
     <script type="module" src="../script/product/product.js"></script>
+    <script src="/script/popap/popap.js"></script>
 
 </body>
+
 </html>

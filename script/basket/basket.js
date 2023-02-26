@@ -1,5 +1,7 @@
 const blc_basket = document.querySelector('.blc-products');
 const altogether_price = document.querySelector('.altogether-price span');
+const blc_popap = document.querySelector('.blc-popap');
+const text_info = document.querySelector('.text-info');
 
 function get_basket() {
     let basket = JSON.parse(localStorage.basket);
@@ -108,7 +110,7 @@ function minus_product() {
 function change_price(arr) {
     const altogether_price = document.querySelector('.altogether-price>span');
     let price_result = 0;
-    if(arr.length != 0) {
+    if (arr.length != 0) {
         for (const el of arr) {
             price_result += el.count * el.price;
         }
@@ -149,15 +151,20 @@ function get_session(event) {
         .then(data => {
             // пользователь не авторизован, сообщаем об этом
             if (data == '') {
-                alert('Войдите в личный кабинет, чтобы оформить заказ.');
+                text_info.innerHTML = 'Войдите в личный кабинет, чтобы оформить заказ.';
+                blc_popap.style.display = 'flex';
+                // alert('Войдите в личный кабинет, чтобы оформить заказ.');
+                // alert(blc_basket.style.display);
                 return;
             }
             if (localStorage.basket == '[]' || localStorage.basket == undefined) {
-                alert('Добавьте товар в корзину.');
+                text_info.innerHTML = 'Добавьте товар в корзину.';
+                blc_popap.style.display = 'flex';
                 return;
             }
             if (user_adres == '') {
-                alert('Укажите адрес доставки.');
+                text_info.innerHTML = 'Укажите адрес доставки.';
+                blc_popap.style.display = 'flex';
                 return;
             } else {
                 send_oder();
@@ -173,5 +180,8 @@ function get_session(event) {
 async function send_oder() {
     await fetch(`../../server/oder/oder.php?oder=${localStorage.basket}&adres=${user_adres}`)
         .then(data => data.json())
-        .then(data => alert('Номер вашего заказа - ' + data))
+        .then(data => {
+            text_info.innerHTML = `Номер вашего заказа - ${data}.<br> Как только заказа будет готов, с вами свяжется наш менеджер.`;
+            blc_popap.style.display = 'flex';
+        })
 }

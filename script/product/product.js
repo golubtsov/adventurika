@@ -1,4 +1,6 @@
 import Product from '../C_Product/Product.js';
+const blc_popap = document.querySelector('.blc-popap');
+const text_info = document.querySelector('.text-info');
 
 function get_id_from_url() {
     let url = window.location.href;
@@ -73,33 +75,33 @@ function create_list_description(descript) {
 function add_basket(id, name, price, img) {
     let product = new Product(id, name, price, img);
     let basket = get_basket();
-    if(check_basket(product.id, basket) == false){
+    if (check_basket(product.id, basket) == false) {
         basket = [...basket, product];
         send_basket(basket);
     } else {
-        alert(check_basket(product.id, basket));
+        text_info.innerHTML = check_basket(product.id, basket);
+        blc_popap.style.display = 'flex';
     }
 }
 
 function check_basket(id_prod, basket) {
     for (const el of basket) {
-        if(el.id == id_prod){
+        if (el.id == id_prod) {
             return 'Уже добавлен!';
         }
     }
     return false;
 }
 
-function get_basket(){
+function get_basket() {
     let basket = JSON.parse(localStorage.basket);
     return basket;
 }
 
-function send_basket(basket){
+function send_basket(basket) {
     localStorage.basket = JSON.stringify(basket);
-    alert('Товар добавлен в корзину!');
+    text_info.innerHTML = 'Товар добавлен в корзину!';
+    blc_popap.style.display = 'flex';
 }
 
 // ==========
-
-// export default get_basket;

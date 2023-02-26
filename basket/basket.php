@@ -16,6 +16,7 @@ session_start();
     <link rel="stylesheet" href="/style/header.css">
     <link rel="stylesheet" href="/style/basket.css">
     <link rel="stylesheet" href="/style/footer.css">
+    <link rel="stylesheet" href="/style/popap.css">
 
 </head>
 
@@ -138,6 +139,19 @@ session_start();
         </footer>
     </div>
 
+    <div class="blc-popap">
+        <div class="blc-window-popap">
+            <div class="blc-close">
+                <div class="btn-close">
+                    <ion-icon class="close-outline" name="close-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="blc-content">
+                <p class="text-info">Что-то пошло не так.</p>
+            </div>
+        </div>
+    </div>
+
     <script src="/script/menu.js"></script>
 
     <!-- подключение библиотеки c иконками https://ionic.io/ionicons/usage -->
@@ -146,6 +160,7 @@ session_start();
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script type="module" src="../script/basket/basket.js"></script>
+    <script src="../script/popap/popap.js"></script>
 
 </body>
 
