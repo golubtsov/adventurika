@@ -25,8 +25,8 @@ session_start();
         <!-- header.css -->
         <div class="blc-black-line">
             <?php
-                if ($_SESSION['name']) {
-                    echo '<div class="blc-name-user">
+            if ($_SESSION['name']) {
+                echo '<div class="blc-name-user">
                                 <a href="/cabinet/cabinet.php" class="user-cabinet">
                                     <div class="name-user">
                                         <ion-icon class="icon-name-user" name="log-out-outline"></ion-icon>
@@ -34,7 +34,7 @@ session_start();
                                     </div>
                                 </a>
                             </div>';
-                }
+            }
             ?>
         </div>
         <header>
@@ -81,10 +81,9 @@ session_start();
         </nav>
         <ul class="nav-items adapt">
             <li class="nav-item"><a href="/" class="nav-link">Главная</a></li>
-            <li class="nav-item"><a href="/catalog/catalog.php" class="nav-link">Каталог</a></li>
-            <li class="nav-item"><a href="" class="nav-link">О мгагзине</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Корзина</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Вход</a></li>
+            <li class="nav-item"><a href="/catalog/catalog.php" class="nav-link link-catalog">Каталог</a></li>
+            <li class="nav-item"><a href="/about/about.php" class="nav-link">О мгагзине</a></li>
+            <li class="nav-item"><a href="/login/login.php" class="nav-link">Вход</a></li>
         </ul>
         <!-- header.css -->
 
@@ -94,7 +93,7 @@ session_start();
                 <div class="blc-login-title">
                     <h2 class="login-title">Регистрация</h2>
                 </div>
-                <form method="POST" action="/server/signup/signup.php" class="form-login">
+                <form method="POST" action="../server/signup/signup.php" class="form-login">
                     <p><label for="fname">Имя <b>*</b></label></p>
                     <p><input type="text" class="fname" name="fname" required></p>
                     <p><label for="lname">Фамилия <b>*</b></label></p>
@@ -109,21 +108,21 @@ session_start();
                     <p><input type="password" class="password2" name="password2" required></p>
                     <p><button type="submit">Зарегистрироваться</button></p>
                     <?php
-                        if ($_SESSION['error']) {
-                            echo '<div class="blc-error-msg">
+                    if ($_SESSION['error']) {
+                        echo '<div class="blc-error-msg">
                                     <p class="error-msg">' . $_SESSION['error'] . '</p>
                                 </div>';
-                            $_SESSION['error'] = '';
-                        }
+                        $_SESSION['error'] = '';
+                    }
 
-                        if ($_SESSION['message']) {
-                            echo '<div class="blc-success-msg">
+                    if ($_SESSION['message']) {
+                        echo '<div class="blc-success-msg">
                                     <p class="success-msg">' . $_SESSION['message'] . '</p>
                                 </div>
                                 <a href="/login/login.php" class="link-signup">Войти</a>
                                 ';
-                            $_SESSION['message'] = '';
-                        }
+                        $_SESSION['message'] = '';
+                    }
                     ?>
                 </form>
             </div>

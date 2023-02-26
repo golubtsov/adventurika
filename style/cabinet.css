@@ -87,3 +87,15 @@
 .active {
     color: #666666;
 }
+
+@media screen and (max-width: 800px) {
+    .blc-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blc-active-oder {
+        display: flex;
+        flex-direction: column;
+    }
+}

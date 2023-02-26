@@ -90,6 +90,10 @@
         flex-direction: column;
     }
 
+    .title-name-prod {
+        font-size: 24px;
+    }
+
     .blc-info-prod {
         width: 90%;
         margin: auto;

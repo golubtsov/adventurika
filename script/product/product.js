@@ -57,7 +57,6 @@ function create_page_prod(prod) {
 }
 
 function create_list_description(descript) {
-    console.log(descript);
     let str_description = descript.split(',');
     let list_description = '';
     for (const el of str_description) {

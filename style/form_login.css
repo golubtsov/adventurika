@@ -122,4 +122,12 @@ b {
     .blc-form-login {
         width: 300px;
     }
+
+    .blc-error-msg {
+        width: 250px;
+    }
+    
+    .blc-success-msg {
+        width: 250px;
+    }
 }

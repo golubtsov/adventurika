@@ -133,7 +133,6 @@ async function get_all_products() {
     await fetch(`../server/index.php?product=${localStorage.podcatalog}&limit=${limit}&offset=${offset}`)
         .then(data => data.json())
         .then(data => {
-            console.log(data);
             for (let i = 0; i < data.length; i++) {
                 create_card_product(data[i]);
             }

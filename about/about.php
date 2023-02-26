@@ -82,9 +82,8 @@ session_start();
         <ul class="nav-items adapt">
             <li class="nav-item"><a href="/" class="nav-link">Главная</a></li>
             <li class="nav-item"><a href="/catalog/catalog.php" class="nav-link">Каталог</a></li>
-            <li class="nav-item"><a href="" class="nav-link">О мгагзине</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Корзина</a></li>
-            <li class="nav-item"><a href="" class="nav-link">Вход</a></li>
+            <li class="nav-item"><a href="/about/about.php" class="nav-link">О мгагзине</a></li>
+            <li class="nav-item"><a href="/login/login.php" class="nav-link">Вход</a></li>
         </ul>
         <!-- header.css -->
 
