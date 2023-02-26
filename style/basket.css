@@ -41,7 +41,7 @@
     border-right: 1px solid #6666667c;
 }
 
-.blc-name-product, 
+.blc-name-product,
 .blc-price-product,
 .blc-count-product,
 .blc-btn-remove {
@@ -127,4 +127,42 @@
 .blc-altogether-price {
     width: 80%;
     margin: auto;
+}
+
+@media screen and (max-width: 850px) {
+    .blc-products {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .blc-product {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blc-product div {
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .img-product {
+        border-right: none;
+    }
+
+    .title-product {
+        height: 65px;
+        font-size: 16px;
+    }
+
+    .btn-count,
+    .value-count,
+    .btn-remove-product {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .blc-products {
+        grid-template-columns: 1fr 1fr;
+    }
 }

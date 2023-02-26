@@ -63,4 +63,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         $prod_db = get_product_by_id($connect, $id);
         echo json_encode($prod_db);
     }
+
+    if (isset($_GET['count'])) {
+        $count = $_GET['count'];
+        $param =  $_GET['param'];
+        if($param == 'popular'){
+            print_r(json_encode(get_prod_popular($connect, $count)));
+        } else if($param == 'new'){
+            print_r(json_encode(get_prod_new($connect, $count)));
+        }
+    }
 }

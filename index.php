@@ -130,182 +130,8 @@ session_start();
                 </div>
 
                 <div class="blc-slider">
-                    <div class="blc-slider-line">
-
-                        <div class="blc-card-prod">
-                            <div class="blc-img-prod">
-                                <img src="https://www.kant.ru/upload/resize_cache/iblock/1be/224_176_1/1bed7755c8a485172c23a0a2a3f5c398.jpg" class="img-prod" alt="">
-                            </div>
-                            <div class="blc-popular-prod">
-                                <ul class="raiting">
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                </ul>
-                            </div>
-                            <div class="blc-name-prod">
-                                <a class="link-title-prod">
-                                    <span>Палатка BTrace 2023 Glade 3</span>
-                                </a>
-                            </div>
-                            <div class="blc-price-prod">
-                                <span class="text-price">3220 &#8381;</span>
-                            </div>
-                            <div class="blc-btn-add">
-                                <button class="btn-add">Смотреть</button>
-                            </div>
-                            <div class="blc-btn-add">
-                                <button class="btn-save">Сохранить</button>
-                            </div>
-                        </div>
-
-                        <div class="blc-card-prod">
-                            <div class="blc-img-prod">
-                                <img src="https://www.kant.ru/upload/resize_cache/iblock/1be/224_176_1/1bed7755c8a485172c23a0a2a3f5c398.jpg" class="img-prod" alt="">
-                            </div>
-                            <div class="blc-popular-prod">
-                                <ul class="raiting">
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                </ul>
-                            </div>
-                            <div class="blc-name-prod">
-                                <a class="link-title-prod">
-                                    <span>Палатка BTrace 2023 Glade 3</span>
-                                </a>
-                            </div>
-                            <div class="blc-price-prod">
-                                <span class="text-price">3220 &#8381;</span>
-                            </div>
-                            <div class="blc-btn-add">
-                                <button class="btn-add">Смотреть</button>
-                            </div>
-                            <div class="blc-btn-add">
-                                <button class="btn-save">Сохранить</button>
-                            </div>
-                        </div>
-
-                        <div class="blc-card-prod">
-                            <div class="blc-img-prod">
-                                <img src="https://www.kant.ru/upload/resize_cache/iblock/1be/224_176_1/1bed7755c8a485172c23a0a2a3f5c398.jpg" class="img-prod" alt="">
-                            </div>
-                            <div class="blc-popular-prod">
-                                <ul class="raiting">
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                </ul>
-                            </div>
-                            <div class="blc-name-prod">
-                                <a class="link-title-prod">
-                                    <span>Палатка BTrace 2023 Glade 3</span>
-                                </a>
-                            </div>
-                            <div class="blc-price-prod">
-                                <span class="text-price">3220 &#8381;</span>
-                            </div>
-                            <div class="blc-btn-add">
-                                <button class="btn-add">Смотреть</button>
-                            </div>
-                            <div class="blc-btn-add">
-                                <button class="btn-save">Сохранить</button>
-                            </div>
-                        </div>
-
-                        <!-- <div class="blc-card-prod">
-                            <div class="blc-img-prod">
-                                <img src="https://www.kant.ru/upload/resize_cache/iblock/1be/224_176_1/1bed7755c8a485172c23a0a2a3f5c398.jpg" class="img-prod" alt="">
-                            </div>
-                            <div class="blc-popular-prod">
-                                <ul class="raiting">
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                </ul>
-                            </div>
-                            <div class="blc-name-prod">
-                                <a class="link-title-prod">
-                                    <span>Палатка BTrace 2023 Glade 3</span>
-                                </a>
-                            </div>
-                            <div class="blc-price-prod">
-                                <span class="text-price">3220 &#8381;</span>
-                            </div>
-                            <div class="blc-btn-add">
-                                <button class="btn-add">Смотреть</button>
-                            </div>
-                            <div class="blc-btn-add">
-                                <button class="btn-save">Сохранить</button>
-                            </div>
-                        </div>
-
-                        <div class="blc-card-prod">
-                            <div class="blc-img-prod">
-                                <img src="https://www.kant.ru/upload/resize_cache/iblock/1be/224_176_1/1bed7755c8a485172c23a0a2a3f5c398.jpg" class="img-prod" alt="">
-                            </div>
-                            <div class="blc-popular-prod">
-                                <ul class="raiting">
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                </ul>
-                            </div>
-                            <div class="blc-name-prod">
-                                <a class="link-title-prod">
-                                    <span>Палатка BTrace 2023 Glade 3</span>
-                                </a>
-                            </div>
-                            <div class="blc-price-prod">
-                                <span class="text-price">3220 &#8381;</span>
-                            </div>
-                            <div class="blc-btn-add">
-                                <button class="btn-add">Смотреть</button>
-                            </div>
-                            <div class="blc-btn-add">
-                                <button class="btn-save">Сохранить</button>
-                            </div>
-                        </div>
-
-                        <div class="blc-card-prod">
-                            <div class="blc-img-prod">
-                                <img src="https://www.kant.ru/upload/resize_cache/iblock/1be/224_176_1/1bed7755c8a485172c23a0a2a3f5c398.jpg" class="img-prod" alt="">
-                            </div>
-                            <div class="blc-popular-prod">
-                                <ul class="raiting">
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                    <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                                </ul>
-                            </div>
-                            <div class="blc-name-prod">
-                                <a class="link-title-prod">
-                                    <span>Палатка BTrace 2023 Glade 3</span>
-                                </a>
-                            </div>
-                            <div class="blc-price-prod">
-                                <span class="text-price">3220 &#8381;</span>
-                            </div>
-                            <div class="blc-btn-add">
-                                <button class="btn-add">Смотреть</button>
-                            </div>
-                            <div class="blc-btn-add">
-                                <button class="btn-save">Сохранить</button>
-                            </div>
-                        </div> -->
-
+                    <div class="blc-slider-line popular">
+                        
                     </div>
                 </div>
 
@@ -352,32 +178,9 @@ session_start();
                     </div>
                 </div>
 
-                <div class="blc-card-prod">
-                    <div class="blc-img-prod">
-                        <img src="https://www.kant.ru/upload/resize_cache/iblock/1be/224_176_1/1bed7755c8a485172c23a0a2a3f5c398.jpg" class="img-prod" alt="">
-                    </div>
-                    <div class="blc-popular-prod">
-                        <ul class="raiting">
-                            <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                            <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                            <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                            <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                            <li class="item-star"><ion-icon name="star" class="star"></ion-icon></li>
-                        </ul>
-                    </div>
-                    <div class="blc-name-prod">
-                        <a class="link-title-prod">
-                            <span>Палатка BTrace 2023 Glade 3</span>
-                        </a>
-                    </div>
-                    <div class="blc-price-prod">
-                        <span class="text-price">3220 &#8381;</span>
-                    </div>
-                    <div class="blc-btn-add">
-                        <button class="btn-add">Смотреть</button>
-                    </div>
-                    <div class="blc-btn-add">
-                        <button class="btn-save">Сохранить</button>
+                <div class="blc-slider">
+                    <div class="blc-slider-line new">
+                        
                     </div>
                 </div>
 
@@ -409,14 +212,14 @@ session_start();
         </footer>
     </div>
 
-    <script src="/script/menu.js"></script>
-
+    
     <!-- подключение библиотеки c иконками https://ionic.io/ionicons/usage -->
-
+    
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-    <script src="/script/index.js"></script>
+    
+    <script src="/script/menu.js"></script>
+    <script type="module" src="/script/index.js"></script>
 
 </body>
 

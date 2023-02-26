@@ -15,6 +15,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    align-items: top;
     justify-content: center;
     margin-left: 15px;
 }
@@ -35,7 +36,6 @@
 
 .blc-info-prod {
     width: 100%;
-    /* background-color: aqua; */
     color: #333333;
 }
 
@@ -82,4 +82,16 @@
 
 .list-desc li {
     margin: 10px 0;
+}
+
+@media screen and (max-width: 950px) {
+    .main-blc-product {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blc-info-prod {
+        width: 90%;
+        margin: auto;
+    }
 }

@@ -104,7 +104,7 @@ function create_card_product(prod) {
     `;
 }
 
-function create_reating(popular){
+function create_reating(popular) {
     let ul_list_reating = `<ul class="raiting">`;
     for (let i = 0; i < popular; i++) {
         ul_list_reating += `
@@ -113,7 +113,7 @@ function create_reating(popular){
         </li>
         `;
     }
-    if(popular != 5) {
+    if (popular != 5) {
         for (let i = 0; i < 5 - popular; i++) {
             ul_list_reating += `
             <li class="item-star">

@@ -177,7 +177,7 @@ session_start();
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script src="/script/menu.js"></script>
-    <script src="/script/catalog/catalog.js"></script>
+    <script type="module" src="/script/catalog/catalog.js"></script>
 </body>
 
 </html>

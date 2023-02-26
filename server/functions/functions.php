@@ -121,3 +121,25 @@ function get_noactive_oders_user($connect){
     return $ressult;
 }
 
+// ========== ФУНКЦИИ ДЛЯ ПОЛУЧЕНИЯ ТОВАРОВ ДЛЯ СЛАЙДЕРА
+
+function get_prod_popular($connect, $count){
+    $ressult = [];
+    $sql = "SELECT * FROM products WHERE popular = 5 LIMIT $count";
+    $data = mysqli_query($connect, $sql);
+    foreach ($data as $el) {
+        $ressult[] = $el;
+    }
+    return $ressult;
+}
+
+function get_prod_new($connect, $count){
+    $ressult = [];
+    $sql = "SELECT * FROM products WHERE new_prod = true LIMIT $count";
+    $data = mysqli_query($connect, $sql);
+    foreach ($data as $el) {
+        $ressult[] = $el;
+    }
+    return $ressult;
+}
+
