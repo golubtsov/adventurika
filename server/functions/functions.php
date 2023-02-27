@@ -27,7 +27,6 @@ function check_reliability_password($pass){
 function get_users_email($connect){
     $data = mysqli_query($connect, "SELECT email FROM users");
     $emails = mysqli_fetch_all($data);
-    mysqli_close($connect);
     return $emails;
 }
 
@@ -48,7 +47,6 @@ function have_email($emails, $email){
 function add_user($user, $connect){
     $sql = "INSERT INTO `users`(`id`, `fname`, `lname`, `email`, `pass`) VALUES ($user->id,'$user->fname','$user->lname','$user->email','$user->password');";
     mysqli_query($connect, $sql);
-    mysqli_close($connect);
 }
 
 // ========== ФУНКЦИИ ДЛЯ ВХОДА ==========
@@ -58,7 +56,6 @@ function get_user_by_email($connect, $el){
     $sql = "SELECT email, pass FROM users WHERE email = '$el'";
     $data = mysqli_query($connect, $sql);
     $data = mysqli_fetch_all($data);
-    mysqli_close($connect);
     return $data;
 }
 
@@ -73,7 +70,6 @@ function get_products_by_podcategory($connect, $prod){
     $sql = "SELECT * FROM products WHERE podcategory = '$prod'";
     $data = mysqli_query($connect, $sql);
     $data = mysqli_fetch_all($data);
-    mysqli_close($connect);
     return $data;
 }
 
@@ -81,7 +77,6 @@ function get_all_products($connect, $limit, $offset){
     $sql = "SELECT * FROM products LIMIT $limit OFFSET $offset";
     $data = mysqli_query($connect, $sql);
     $data = mysqli_fetch_all($data);
-    mysqli_close($connect);
     return $data;
 }
 
@@ -91,7 +86,6 @@ function get_product_by_id($connect, $id){
     $sql = "SELECT * FROM products WHERE id = '$id'";
     $data = mysqli_query($connect, $sql);
     $data = mysqli_fetch_all($data);
-    mysqli_close($connect);
     return $data[0];
 }
 
@@ -101,7 +95,6 @@ function get_product_by_id($connect, $id){
 function send_oder($connect, $oder){
     $sql = "INSERT INTO `oders`(`num_oder`, `user_email`, `prod_id`, `prod_name`, `prod_count`, `price`, `adres`, `status`) VALUES ($oder->num_oder, '$oder->email_user', $oder->id_prod, '$oder->name_prod', $oder->count_prod, $oder->price, '$oder->adres', 'active')";
     mysqli_query($connect, $sql);
-    mysqli_close($connect);
 }
 
 function create_num_oder(){
@@ -115,7 +108,6 @@ function get_active_oders_user($connect){
     foreach(mysqli_fetch_all($data) as $el){
         $ressult[] = $el;
     }
-    mysqli_close($connect);
     return $ressult;
 }
 
@@ -126,7 +118,6 @@ function get_noactive_oders_user($connect){
     foreach(mysqli_fetch_all($data) as $el){
         $ressult[] = $el;
     }
-    mysqli_close($connect);
     return $ressult;
 }
 
@@ -139,7 +130,6 @@ function get_prod_popular($connect, $count){
     foreach ($data as $el) {
         $ressult[] = $el;
     }
-    mysqli_close($connect);
     return $ressult;
 }
 
@@ -150,7 +140,6 @@ function get_prod_new($connect, $count){
     foreach ($data as $el) {
         $ressult[] = $el;
     }
-    mysqli_close($connect);
     return $ressult;
 }
 
@@ -159,15 +148,12 @@ function get_prod_new($connect, $count){
 function get_hash_password($connect, $email){
     $sql = "SELECT pass FROM users WHERE email = '$email'";
     $hash = mysqli_query($connect, $sql);
-    mysqli_close($connect);
     return mysqli_fetch_row($hash);
 }
 
 function change_password($connect, $hash, $new_pass){
     $sql = "UPDATE users SET pass = '$new_pass' WHERE pass = '$hash';";
     if(mysqli_query($connect, $sql)){
-        mysqli_close($connect);
         return true;
     }
-    mysqli_close($connect);
 }

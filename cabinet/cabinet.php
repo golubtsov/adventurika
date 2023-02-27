@@ -1,5 +1,8 @@
 <?php
 session_start();
+if($_SESSION['name'] == '' || $_SESSION['name'] == null){
+    header('Location: ../../index.php');
+}
 ?>
 
 <!DOCTYPE html>
