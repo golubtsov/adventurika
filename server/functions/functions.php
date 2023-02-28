@@ -45,7 +45,7 @@ function have_email($emails, $email){
 
 // ф-ия добавляет пользователя в бд
 function add_user($user, $connect){
-    $sql = "INSERT INTO `users`(`id`, `fname`, `lname`, `email`, `pass`) VALUES ($user->id,'$user->fname','$user->lname','$user->email','$user->password');";
+    $sql = "INSERT INTO `users` (`id`, `fname`, `lname`, `phone`, `email`, `pass`) VALUES ($user->id,'$user->fname','$user->lname', $user->phone,'$user->email','$user->password');";
     mysqli_query($connect, $sql);
 }
 

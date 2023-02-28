@@ -5,6 +5,7 @@ class New_User{
     public $id;
     public $fname;
     public $lname;
+    public $phone;
     public $email;
     public $password;
     
@@ -12,6 +13,7 @@ class New_User{
         $id,
         $fname,
         $lname,
+        $phone,
         $email,
         $password
     )
@@ -19,6 +21,7 @@ class New_User{
         $this->id = $id;
         $this->fname = $fname;
         $this->lname = $lname;
+        $this->phone = $phone;
         $this->email = $email;
         $this->password = $password;
     }

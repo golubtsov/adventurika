@@ -43,6 +43,7 @@ if($_SERVER['REQUEST_METHOD']){
                     $count_users,
                     $_POST['fname'],
                     $_POST['lname'],
+                    $_POST['phone'],
                     $_POST['email'],
                     $pass_hash,
                 );
