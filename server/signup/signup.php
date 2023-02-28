@@ -45,7 +45,7 @@ if($_SERVER['REQUEST_METHOD']){
                     $_POST['lname'],
                     $_POST['phone'],
                     $_POST['email'],
-                    $pass_hash,
+                    $pass_hash
                 );
 
                 add_user($new_user, $connect);

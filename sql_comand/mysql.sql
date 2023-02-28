@@ -20,7 +20,7 @@ CREATE TABLE products(
 );
 
 CREATE TABLE oders( 
-    num_oder int, 
+    num_oder int PRIMARY KEY, 
     user_email varchar(100), 
     prod_id int, 
     prod_name varchar(200), 

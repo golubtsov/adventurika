@@ -35,12 +35,12 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
     }
 
     if($_GET['active'] == 1){
-        $active_oders = get_active_oders_user($connect);
+        $active_oders = get_active_oders_user($connect, $_SESSION['name']);
         print_r(json_encode($active_oders));
     }
 
     if($_GET['active'] == 2){
-        $no_active_oders = get_noactive_oders_user($connect);
+        $no_active_oders = get_noactive_oders_user($connect, $_SESSION['name']);
         print_r(json_encode($no_active_oders));
     }
 }

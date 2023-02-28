@@ -101,9 +101,9 @@ function create_num_oder(){
     return rand(100000, 999999);
 }
 
-function get_active_oders_user($connect){
+function get_active_oders_user($connect, $email){
     $ressult = [];
-    $sql = "SELECT * FROM oders WHERE status = 'active'";
+    $sql = "SELECT * FROM oders WHERE status = 'active' AND user_email = '$email'";
     $data = mysqli_query($connect, $sql);
     foreach(mysqli_fetch_all($data) as $el){
         $ressult[] = $el;
@@ -111,9 +111,9 @@ function get_active_oders_user($connect){
     return $ressult;
 }
 
-function get_noactive_oders_user($connect){
+function get_noactive_oders_user($connect, $email){
     $ressult = [];
-    $sql = "SELECT * FROM oders WHERE status = 'noactive'";
+    $sql = "SELECT * FROM oders WHERE status = 'noactive' AND user_email = '$email'";
     $data = mysqli_query($connect, $sql);
     foreach(mysqli_fetch_all($data) as $el){
         $ressult[] = $el;
