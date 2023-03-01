@@ -12,19 +12,16 @@ if($_SERVER['REQUEST_METHOD']){
 
             if(!check_email($_POST['email'])){
                 $_SESSION["error"] = 'Не корректный email';
-                break;
                 header('Location: ../../login/signup.php');
             }
 
             if(!check_passwords($_POST['password'], $_POST['password2'])){
                 $_SESSION["error"] = 'Пароли не совпадают!';
-                break;
                 header('Location: ../../login/signup.php');
             }
 
             if(check_reliability_password($_POST['password']) == 0){
                 $_SESSION["error"] = 'Пароль должен быть не менее 8 символов.';
-                break;
                 header('Location: ../../login/signup.php');
             }
 

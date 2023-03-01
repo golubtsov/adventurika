@@ -129,7 +129,6 @@ session_start();
 
         <div class="content">
             <div class="container">
-
                 <div class="blc-products">
                     <div class="blc-window-products">
                     </div>

@@ -14,6 +14,20 @@ const line_slider_popular = document.querySelector('.blc-slider .popular');
 const line_slider_new = document.querySelector('.blc-slider .new');
 
 function check_resize() {
+    if (window.outerWidth > 1650 && window.outerWidth <= 2000) {
+        line_slider_popular.style.gridTemplateColumns = '1fr 1fr 1fr 1fr 1fr';
+        line_slider_new.style.gridTemplateColumns = '1fr 1fr 1fr 1fr 1fr';
+        get_prod_by_if(5, 'popular');
+        get_prod_by_if(5, 'new');
+    }
+
+    if (window.outerWidth > 1400 && window.outerWidth <= 1650) {
+        line_slider_popular.style.gridTemplateColumns = '1fr 1fr 1fr 1fr';
+        line_slider_new.style.gridTemplateColumns = '1fr 1fr 1fr 1fr';
+        get_prod_by_if(4, 'popular');
+        get_prod_by_if(4, 'new');
+    }
+
     if (window.outerWidth >= 1000 && window.outerWidth <= 1400) {
         line_slider_popular.style.gridTemplateColumns = '1fr 1fr 1fr';
         line_slider_new.style.gridTemplateColumns = '1fr 1fr 1fr';
