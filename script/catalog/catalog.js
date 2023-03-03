@@ -1,9 +1,11 @@
 // ССЫЛКА КАТАЛОГ, ПРИСВАЕВАЕТ LOCALSTORAGE.PODCATALOG = ALL, ЧТОБЫ ПРИ КЛИКЕ ПО НЕЙ ЗАГРУЖАЛИСЬ ВСЕ КАТЕГОРИИ ТОВАРОВ
 
-const link_catalog = document.querySelector('.link-catalog');
-link_catalog.addEventListener('click', () => {
-    localStorage.podcatalog = 'all';
-});
+const links_catalog = document.querySelectorAll('.link-catalog');
+for (const el of links_catalog) {
+    el.addEventListener('click', () => {
+        localStorage.podcatalog = 'all';
+    });
+}
 
 // ОТКРЫТИЕ / ЗАКРЫТИЕ ПОДКАТАЛОГА
 const blc_lists_podcatalog = document.querySelector('.blc-lists-podcatalog');
